@@ -140,7 +140,8 @@ const Footer: React.FC = () => {
         direction={{ base: "column", md: "row" }}
         gap={12}
         mt={30}
-        alignItems="center"
+        alignItems={{ base: "flex-start", md: "center" }}
+        textAlign={{ base: "left", md: "center" }}
       >
         <Link
           href="#"

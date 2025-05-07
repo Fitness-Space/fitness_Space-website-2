@@ -1,41 +1,42 @@
 import React from "react";
 import { Check } from "lucide-react";
-import {
-  Box,
-  Button,
-  Flex,
-  Text,
-  VStack,
-  List,
-  ListItem,
-  Icon,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Text, List } from "@chakra-ui/react";
 
 const pricingPlans = [
   {
     price: "4,500/month",
     features: [
-      "Intermittent fasting guide (14:10 or 16:8",
+      "Intermittent fasting guide (14:10 or 16:8)",
       "28-day portion-controlled meal plan (easy-to-digest foods)",
       "Daily detox water reminders",
       "Light home workouts (10–15 mins, low impact)",
       "Digestive health focus (probiotic foods, fiber goals)",
       "100+ bonus health points",
     ],
-    mealPlan: "Metabolic Reset (For beginners or those restarting) ",
+    mealPlan: (
+      <Box textAlign="center">
+        <Text fontWeight="bold">Metabolic Reset</Text>
+        <Text fontStyle="italic">(For beginners or those restarting)</Text>
+      </Box>
+    ),
   },
   {
     price: "13,500/3 months",
     features: [
-      " Flexible fasting plans (user-adjusted window)",
-
+      "Flexible fasting plans (user-adjusted window)",
       "Moderate workouts (20–30 mins including dance cardio)",
       "Balanced meal templates with local food swaps",
       "Step count target: 8,000–10,000/day",
       "200+ bonus health points",
     ],
-    mealPlan:
-      "Sustain Burn (For those maintaining progress or want to build consistency) ",
+    mealPlan: (
+      <Box textAlign="center">
+        <Text fontWeight="bold">Sustain Burn</Text>
+        <Text fontStyle="italic">
+          For those maintaining progress or want to build consistency
+        </Text>
+      </Box>
+    ),
   },
   {
     price: "27,000/6 months",
@@ -47,66 +48,77 @@ const pricingPlans = [
       "High-step targets (12,000–15,000/day)",
       "Reward boosters: earn 2x Health Score points on hard days",
     ],
-    mealPlan: "Burn (Fat loss acceleration) ",
+    mealPlan: (
+      <Box textAlign="center">
+        <Text fontWeight="bold">Burn</Text>
+        <Text fontStyle="italic">Fat loss acceleration</Text>
+      </Box>
+    ),
   },
 ];
 
 const PricingCards: React.FC = () => {
   return (
-    <Box p={6}>
-      <Flex maxW={{ base: "full", md: "48%" }} p={{ base: "6", md: "20" }}>
+    <Box px={{ base: 4, md: 8, lg: 12 }} py={10}>
+      <Box
+        mb={10}
+        maxW="800px"
+        mx="auto"
+        textAlign={{ base: "center", md: "left" }}
+      >
         <Text
-          fontSize={{ base: "2xl", md: "4xl" }}
+          fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
           color="black"
         >
-          We've got a plan that is perfect for{" "}
+          We've got a plan that is perfect{" "}
           <Text as="span" color="#f2a412">
-            YOU
+            For YOU
           </Text>
         </Text>
-      </Flex>
+      </Box>
 
-      <Flex wrap="wrap" justify="center" gap={6} p={{ base: "full", md: "6" }}>
+      <Flex wrap="wrap" justify="center" gap={8}>
         {pricingPlans.map((plan, index) => (
           <Box
             key={index}
-            w={{ base: "full", md: "30%" }}
+            w={{ base: "100%", md: "80%", lg: "30%" }}
             bg={index === 1 ? "black" : "white"}
             borderRadius="2xl"
-            p={8}
+            p={{ base: 6, md: 8 }}
             boxShadow="lg"
             border="1px solid"
-            borderColor="gray.700"
+            borderColor="gray.200"
             display="flex"
             flexDirection="column"
             alignItems="center"
           >
             <Text
-              fontSize={{ base: "3xl", md: "2xl" }}
+              fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="light"
               color={index === 1 ? "white" : "black"}
               textAlign="center"
+              mb={4}
             >
               {plan.price.split("/")[0]}
-              <Text as="span" fontSize="2xl" color="green.500">
+              <Text as="span" fontSize="xl" color="green.500">
                 /
               </Text>
-              <Text as="span" fontSize="lg">
+              <Text as="span" fontSize="md">
                 {plan.price.split("/")[1]}
               </Text>
             </Text>
-            {/* #c4fddc
-        #8bfdbb */}
+
             <Button
-              my={{ base: "4", md: "4" }}
-              w={{ base: "full", md: "full" }}
+              my={{ base: 4, md: 6 }}
+              w="full"
               borderWidth={2}
               borderColor={index === 1 ? "white" : "black"}
               bg={index === 1 ? "#f2a412" : "#c4fddc"}
               color="black"
               borderRadius="full"
-              p={{ base: 6, md: 10 }}
+              px={{ base: 6, md: 8 }}
+              py={{ base: 10, md: 14 }}
               fontSize={{ base: "sm", md: "md" }}
               whiteSpace="normal"
               lineHeight="short"
@@ -119,16 +131,11 @@ const PricingCards: React.FC = () => {
               {plan.mealPlan}
             </Button>
 
-            <List.Root
-              gap={4}
-              mt={10}
-              color={index === 1 ? "white" : "black"}
-              fontSize={{ base: "sm", md: "lg" }}
-            >
+            <List.Root gap={4} mt={8} color={index === 1 ? "white" : "black"}>
               {plan.features.map((feature, idx) => (
                 <List.Item key={idx} display="flex" alignItems="center">
                   <Check color="green" size={20} />
-                  <Text ml={5} fontSize={{ base: "base", md: "md" }}>
+                  <Text ml={3} fontSize={{ base: "sm", md: "md" }}>
                     {feature}
                   </Text>
                 </List.Item>

@@ -1,73 +1,81 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Text,
-  Flex,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, Text, Flex, Image } from "@chakra-ui/react";
 
 const DownloadSection: React.FC = () => {
   return (
     <Flex
-      direction={{ base: "column", md: "row" }}
-      gap={2}
-      px={{ base: 8, md: 16 }}
-      alignItems="center"
+      direction={{ base: "column", lg: "row" }}
+      gap={1}
+      px={{ base: 4, md: 8, lg: 12 }}
+      py={{ base: 8, md: 12, lg: 20 }}
+      alignItems="flex-start"
+      justifyContent="center"
+      flexWrap="wrap"
     >
       {/* First Section */}
       <Box
         flex="1"
         borderRadius="md"
         overflow="hidden"
-        p={1}
-        width={{ base: "350px", md: "100%" }}
-        height={{ base: "550px", md: "100%" }}
-        alignItems="center"
+        p={{ base: 4, md: 6 }}
+        width="100%"
+        maxW={{ base: "100%", md: "780px", lg: "100%" }}
       >
         <Image
           src="/nutrient-dense meals (1).jpg"
           alt="Training"
           width="100%"
-          height="65vh"
+          height={{ base: "auto", md: "auto", lg: "500px" }} // Reduced height on laptops
+          objectFit="cover"
+          borderRadius="md"
+          mb={6}
         />
-        <Heading fontSize="4xl" fontWeight="bold" mt={10} color="black">
+        <Heading
+          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          fontWeight="bold"
+          color="black"
+          mb={4}
+        >
           Nutrient-Packed{" "}
           <Text as="span" color="#f2a412">
             Meals
           </Text>
         </Heading>
-        <Text fontSize="24px" mt={10} color="black">
+        <Text
+          fontSize={{ base: "md", md: "lg", lg: "xl" }}
+          color="black"
+          mb={8}
+        >
           Fuel your body with wholesome, nutrient-dense meals. Eat smart, stay
           energized, and enjoy every bite. Portion control, meal balance, and
           mindful nutrition!
         </Text>
         <Flex
-          mt={10}
-          mb={20}
+          mt={6}
           gap={4}
-          flex="1"
-          flexDirection={{ base: "column", md: "row" }}
-          display={{ base: "none", md: "flex" }}
+          flexDirection={{ base: "column", sm: "row" }}
+          justifyContent="flex-start"
         >
           <Button
             bg="black"
             color="white"
-            rounded="4xl"
-            fontSize="xl"
+            rounded="full"
+            fontSize="md"
             _hover={{ bg: "gray.800" }}
+            flex="1"
+            py={{ base: 3, md: 6, lg: 6 }}
           >
             Download iOS
           </Button>
           <Button
             bg="black"
             color="white"
-            rounded="4xl"
-            fontSize="xl"
+            rounded="full"
+            fontSize="md"
             _hover={{ bg: "gray.800" }}
+            flex="1"
+            py={{ base: 3, md: 6, lg: 6 }}
           >
             Download Android
           </Button>
@@ -79,51 +87,64 @@ const DownloadSection: React.FC = () => {
         flex="1"
         borderRadius="md"
         overflow="hidden"
-        p={1}
-        width={{ base: "350px", md: "100%" }}
-        height={{ base: "550px", md: "100%" }}
-        mt={{ base: 4, md: 0 }}
-        alignItems="center"
+        p={{ base: 3, md: 4 }}
+        width="100%"
+        maxW={{ base: "100%", md: "780px", lg: "100%" }}
       >
         <Image
           src="/fitness_tracking (1).jpg"
           alt="Running"
           width="100%"
-          height="65vh"
+          height={{ base: "auto", md: "auto", lg: "500px" }} // Reduced height on laptops
+          objectFit="cover"
+          borderRadius="md"
+          mb={6}
         />
-        <Heading fontSize="4xl" fontWeight="bold" mt={10} color="black">
+        <Heading
+          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          fontWeight="bold"
+          color="black"
+          mb={4}
+        >
           Precision Fitness{" "}
           <Text as="span" color="#f2a412">
             Tracking
           </Text>
         </Heading>
-        <Text fontSize="24px" mt={10} color="black">
+        <Text
+          fontSize={{ base: "md", md: "lg", lg: "xl" }}
+          color="black"
+          mb={8}
+        >
           Track your workouts, measure progress, and stay on course. Set goals,
           stay consistent, and push your limits. Every step counts—log it,
           improve, and keep moving!
         </Text>
         <Flex
-          mt={10}
-          mb={20}
+          mt={6}
           gap={4}
-          flex="1"
-          flexDirection={{ base: "column", md: "row" }}
+          flexDirection={{ base: "column", sm: "row" }}
+          justifyContent="flex-start"
         >
           <Button
             bg="black"
             color="white"
-            rounded="4xl"
-            fontSize="xl"
+            rounded="full"
+            fontSize="md"
             _hover={{ bg: "gray.800" }}
+            flex="1"
+            py={{ base: 3, md: 6, lg: 6 }}
           >
             Download iOS
           </Button>
           <Button
             bg="black"
             color="white"
-            rounded="4xl"
-            fontSize="xl"
+            rounded="full"
+            fontSize="md"
             _hover={{ bg: "gray.800" }}
+            flex="1"
+            py={{ base: 3, md: 6, lg: 6 }}
           >
             Download Android
           </Button>

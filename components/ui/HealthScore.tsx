@@ -2,9 +2,11 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 const HealthScore: React.FC = () => {
   return (
-    <Box overflow="hidden" px={{ base: 8, md: 16 }} mt={{ base: 10, md: 10 }}>
-      {" "}
-      {/* Prevent overflow */}
+    <Box
+      overflow="hidden"
+      px={{ base: 4, md: 8, lg: 16 }}
+      mt={{ base: 10, md: 16 }}
+    >
       <Box
         width="100%"
         minH="100vh"
@@ -13,51 +15,57 @@ const HealthScore: React.FC = () => {
         backgroundRepeat="no-repeat"
         backgroundPosition="center"
         display="flex"
-        flexDirection={{ base: "column", md: "row" }} // Stack on mobile
+        flexDirection={{ base: "column", lg: "row" }}
         alignItems="center"
         justifyContent="space-between"
-        px={{ base: 4, md: 16 }}
-        py={{ base: 10, md: 20 }}
-        pt={{ base: 20, md: 30 }} // Pushes content down
+        px={{ base: 4, md: 10, lg: 20 }}
+        py={{ base: 10, md: 16, lg: 20 }}
+        pt={{ base: 20, md: 30 }}
+        gap={{ base: 10, md: 14 }}
       >
-        {/* Text Inside Background */}
-
+        {/* Text Content */}
         <Box
           bg="rgba(209, 249, 226, 0.83)"
-          p={{ base: 4, md: 8 }}
+          p={{ base: 4, md: 6, lg: 8 }}
           borderRadius="lg"
           backdropFilter="blur(10px)"
-          w={{ base: "100%", md: "60%" }}
+          w={{ base: "100%", md: "80%", lg: "60%" }}
           color="white"
           boxShadow="lg"
-          textAlign="left"
-          alignSelf="flex-start"
-          mt={{ base: 10, md: 20 }}
+          textAlign={{ base: "center", md: "center", lg: "left" }} // Center on tablet
+          mt={{ base: 0, md: 0, lg: 0 }}
+          alignSelf={{ base: "flex-start", md: "center", lg: "flex-start" }} // Center on tablet
         >
-          <Text fontSize="35px" fontWeight="bold" color={"black"}>
-            Track Progress. Earn Rewards. Stay Motivated.
+          <Text
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+            fontWeight="bold"
+            color="black"
+          >
+            Track Your Progress. Earn Tokens. Stay Motivated.
           </Text>
           <Text
-            fontSize="20px"
+            fontSize={{ base: "md", md: "lg", lg: "xl" }}
             mt={4}
-            color={"black"}
-            fontWeight="200"
+            color="black"
+            fontWeight="300"
             fontStyle="italic"
           >
-            Earn points for workouts, meals, and consistency. Use them for your
-            next subscription and stay on track your effortlessly!
+            Accumulate Health Score points for workouts, balanced meals, and
+            consistency. Convert your points into tokens that unlock exclusive
+            benefits—discounts, premium content, and more. Achieve your goals
+            while earning rewards effortlessly!
           </Text>
         </Box>
 
-        {/* Right-Aligned Image with Border Shadow */}
+        {/* Image */}
         <Image
-          src="/20.png" // Replace with your image
+          src="/20.png"
           alt="Health Section"
-          maxW={{ base: "100%", md: "90%" }}
-          maxH={{ base: "100%", md: "750px" }}
+          maxW={{ base: "100%", md: "100%", lg: "40%" }} // Increased width on base and md
+          maxH={{ base: "100%", md: "100%", lg: "700px" }} // Increased height on base and md
+          objectFit="contain"
           borderRadius="lg"
           boxShadow="0px 4px 20px rgba(255, 255, 255, 0.5)"
-          mt={{ base: 10, md: 10 }}
         />
       </Box>
     </Box>
