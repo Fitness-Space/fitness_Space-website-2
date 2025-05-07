@@ -6,7 +6,12 @@ const HeroSection: React.FC = () => {
   return (
     <>
       {/* Full-screen Hero Image */}
-      <Box height="100vh" width="100%" overflow="hidden">
+      <Box
+        height="100vh"
+        width="100%"
+        overflow="hidden"
+        px={{ base: 4, md: 8, lg: 12 }}
+      >
         <Image
           src="hero (1).jpg"
           alt="Hero Image"

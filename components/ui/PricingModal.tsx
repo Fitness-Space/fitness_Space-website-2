@@ -59,21 +59,22 @@ const pricingPlans = [
 
 const PricingCards: React.FC = () => {
   return (
-    <Box px={{ base: 4, md: 8, lg: 12 }} py={10}>
+    <Box px={{ base: 4, md: 8, lg: 12 }} py={14}>
       <Box
         mb={10}
         maxW="800px"
-        mx="auto"
+        // Removed mx="auto"
         textAlign={{ base: "center", md: "left" }}
+        ml={{ base: 0, md: 8, lg: 12 }} // Adds left margin on md+
       >
         <Text
           fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
           fontWeight="bold"
           color="black"
         >
-          We've got a plan that is perfect{" "}
+          We've got a plan that is perfect for{" "}
           <Text as="span" color="#f2a412">
-            For YOU
+            YOU
           </Text>
         </Text>
       </Box>
