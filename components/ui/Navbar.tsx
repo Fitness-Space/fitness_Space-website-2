@@ -84,7 +84,7 @@ const Navbar = () => {
                 textDecoration: "underline", // Add underline on hover
               }}
             >
-              Find a Store
+              Daily Habits
             </Link>
             <Link
               as={NextLink}
@@ -97,7 +97,7 @@ const Navbar = () => {
                 textDecoration: "underline", // Add underline on hover
               }}
             >
-              About Us
+              Health Score
             </Link>
             <Link
               as={NextLink}
@@ -110,7 +110,7 @@ const Navbar = () => {
                 textDecoration: "underline", // Add underline on hover
               }}
             >
-              Find a Store
+              Community
             </Link>
           </Flex>
           {/* Mobile Hamburger Menu */}
@@ -154,7 +154,7 @@ const Navbar = () => {
                           color="white"
                           _hover={{ textDecoration: "underline" }}
                         >
-                          About Us
+                          Health Score
                         </Link>
                       </Flex>
                     </Drawer.Body>

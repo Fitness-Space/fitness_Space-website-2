@@ -29,7 +29,7 @@ const DownloadSection: React.FC = () => {
         alignItems="center"
       >
         <Image
-          src="/nutrient-dense meals.jpg"
+          src="/nutrient-dense meals (1).jpg"
           alt="Training"
           width="100%"
           height="65vh"
@@ -86,7 +86,7 @@ const DownloadSection: React.FC = () => {
         alignItems="center"
       >
         <Image
-          src="/fitness_tracking.jpg"
+          src="/fitness_tracking (1).jpg"
           alt="Running"
           width="100%"
           height="65vh"

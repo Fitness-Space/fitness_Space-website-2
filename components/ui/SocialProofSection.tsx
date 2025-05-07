@@ -14,7 +14,7 @@ const SocialProofSection: React.FC = () => {
       {/* Left Side - Image */}
       <Box width={{ base: "100%", md: "50%" }}>
         <Image
-          src="/group-female-friends-enjoying-day-out-together.jpg"
+          src="/group-female-friends-enjoying-day-out-together (1).jpg"
           alt="Customer Testimonial"
           width="100%"
           height={{ base: "300px", md: "800px" }} // Increased height

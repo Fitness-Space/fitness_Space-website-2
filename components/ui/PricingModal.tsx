@@ -15,38 +15,39 @@ const pricingPlans = [
   {
     price: "4,500/month",
     features: [
-      "Connect 80 websites",
-      "Connect up to 5 bank accounts",
-      "Track up to 50 credit cards",
-      "Analytics support",
-      "Export up to 12 months data",
-      "Cloud service 24/7",
+      "Intermittent fasting guide (14:10 or 16:8",
+      "28-day portion-controlled meal plan (easy-to-digest foods)",
+      "Daily detox water reminders",
+      "Light home workouts (10–15 mins, low impact)",
+      "Digestive health focus (probiotic foods, fiber goals)",
+      "100+ bonus health points",
     ],
-    mealPlan: "Metabolic Reset ",
+    mealPlan: "Metabolic Reset (For beginners or those restarting) ",
   },
   {
     price: "13,500/3 months",
     features: [
-      "Connect 150 websites",
-      "Connect up to 10 bank accounts",
-      "Track unlimited credit cards",
-      "Advanced analytics",
-      "Export unlimited data",
-      "Premium cloud service 24/7",
+      " Flexible fasting plans (user-adjusted window)",
+
+      "Moderate workouts (20–30 mins including dance cardio)",
+      "Balanced meal templates with local food swaps",
+      "Step count target: 8,000–10,000/day",
+      "200+ bonus health points",
     ],
-    mealPlan: "Sustained Burn",
+    mealPlan:
+      "Sustain Burn (For those maintaining progress or want to build consistency) ",
   },
   {
     price: "27,000/6 months",
     features: [
-      "Enterprise-level support",
-      "Unlimited bank accounts",
-      "Custom analytics",
-      "Personalized data exports",
-      "Dedicated account manager",
-      "Cloud security & backups",
+      "Structured 16:8 fasting with optional OMAD days",
+      "Intense workout circuits (HIIT, Tabata options)",
+      "Low-carb, high-fiber meal plans",
+      "Weekly weight, waist & arm tracking",
+      "High-step targets (12,000–15,000/day)",
+      "Reward boosters: earn 2x Health Score points on hard days",
     ],
-    mealPlan: "Body Recomposition",
+    mealPlan: "Burn (Fat loss acceleration) ",
   },
 ];
 
@@ -98,16 +99,17 @@ const PricingCards: React.FC = () => {
             {/* #c4fddc
         #8bfdbb */}
             <Button
-              my={{ base: "4", md: "10" }}
-              w={{ base: "full", md: "80%" }}
+              my={{ base: "4", md: "4" }}
+              w={{ base: "full", md: "full" }}
               borderWidth={2}
               borderColor={index === 1 ? "white" : "black"}
-              bg={index === 1 ? "#f2a412" : " #c4fddc"}
+              bg={index === 1 ? "#f2a412" : "#c4fddc"}
               color="black"
               borderRadius="full"
-              p={{ base: 6, md: 8 }}
-              fontSize={{ base: "md", md: "xl" }}
-              textAlign="center"
+              p={{ base: 6, md: 10 }}
+              fontSize={{ base: "sm", md: "md" }}
+              whiteSpace="normal"
+              lineHeight="short"
               _hover={{
                 bg: index === 1 ? "transparent" : "black",
                 color: "white",
@@ -119,14 +121,14 @@ const PricingCards: React.FC = () => {
 
             <List.Root
               gap={4}
-              mt={12}
+              mt={10}
               color={index === 1 ? "white" : "black"}
               fontSize={{ base: "sm", md: "lg" }}
             >
               {plan.features.map((feature, idx) => (
                 <List.Item key={idx} display="flex" alignItems="center">
                   <Check color="green" size={20} />
-                  <Text ml={5} fontSize={{ base: "md", md: "lg" }}>
+                  <Text ml={5} fontSize={{ base: "base", md: "md" }}>
                     {feature}
                   </Text>
                 </List.Item>

@@ -31,14 +31,23 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Find a Store
+            Join an Accountability Group
           </Link>
+          <br />
           <Link
             href="#"
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Find a Store
+            Track Your Progress
+          </Link>
+          <br />
+          <Link
+            href="#"
+            color="gray.400"
+            _hover={{ textDecoration: "underline" }}
+          >
+            Access Your Meal Plan
           </Link>
         </Box>
 
@@ -52,7 +61,7 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Get Help
+            Get Support
           </Link>
           <br />
           <Link
@@ -60,7 +69,7 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Returns
+            FAQs
           </Link>
           <br />
           <Link
@@ -68,7 +77,7 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Contact Us
+            Contact Team Help
           </Link>
         </Box>
 
@@ -82,7 +91,7 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            About Nike
+            About Fitness Space
           </Link>
           <br />
           <Link
@@ -90,7 +99,7 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            News
+            Our Story
           </Link>
           <br />
           <Link
@@ -106,7 +115,7 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Investors
+            Partnerships
           </Link>
           <br />
           <Link
@@ -114,14 +123,14 @@ const Footer: React.FC = () => {
             color="gray.400"
             _hover={{ textDecoration: "underline" }}
           >
-            Sustainability
+            Community Impact
           </Link>
         </Box>
 
         <Box>
           <Flex gap={2} color="gray.500">
             <Icon as={Globe} boxSize={5} />
-            <Text>Egypt</Text>
+            <Text>Nigeria</Text>
           </Flex>
         </Box>
       </Flex>
@@ -133,7 +142,13 @@ const Footer: React.FC = () => {
         mt={30}
         alignItems="center"
       >
-        <Text mt={2}>© 2025 Nike, Inc. All rights reserved</Text>
+        <Link
+          href="#"
+          color="gray.400"
+          _hover={{ textDecoration: "underline" }}
+        >
+          © 2025 Fitness Space Ltd. All rights reserved
+        </Link>
         <Link
           href="#"
           color="gray.400"
@@ -146,7 +161,14 @@ const Footer: React.FC = () => {
           color="gray.400"
           _hover={{ textDecoration: "underline" }}
         >
-          Privacy & Cookie Policy
+          Privacy Policy
+        </Link>
+        <Link
+          href="#"
+          color="gray.400"
+          _hover={{ textDecoration: "underline" }}
+        >
+          Refund Policy
         </Link>
       </Flex>
     </Box>

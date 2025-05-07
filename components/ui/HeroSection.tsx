@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box px={{ base: 8, md: 16 }} mb={{ base: 20, md: 30 }}>
       <Image
-        src="./hero.jpg"
+        src="hero (1).jpg"
         alt="Hero Image"
         objectFit="cover"
         width={{ base: "400px", md: "100%" }}
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
             Fitness
           </Text>{" "}
           and <br />
-          for Everyone
+          Wellness for Everyone
         </Text>
       </Container>
     </Box>

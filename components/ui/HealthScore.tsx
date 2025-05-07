@@ -8,7 +8,7 @@ const HealthScore: React.FC = () => {
       <Box
         width="100%"
         minH="100vh"
-        bgImage="url('/health_score.jpg')"
+        bgImage="url('/health_score (1).jpg')"
         backgroundSize="cover"
         backgroundRepeat="no-repeat"
         backgroundPosition="center"
