@@ -6,12 +6,11 @@ const DownloadSection: React.FC = () => {
   return (
     <Flex
       direction={{ base: "column", lg: "row" }}
-      gap={1}
+      gap={{ base: 8, lg: 12 }}
       px={{ base: 4, md: 8, lg: 12 }}
       py={{ base: 8, md: 12, lg: 20 }}
       alignItems="flex-start"
       justifyContent="center"
-      flexWrap="wrap"
     >
       {/* First Section */}
       <Box
@@ -26,7 +25,7 @@ const DownloadSection: React.FC = () => {
           src="/nutrient-dense meals (1).jpg"
           alt="Training"
           width="100%"
-          height={{ base: "auto", md: "auto", lg: "500px" }} // Reduced height on laptops
+          height={{ base: "auto", md: "auto", lg: "500px" }}
           objectFit="cover"
           borderRadius="md"
           mb={6}
@@ -66,7 +65,7 @@ const DownloadSection: React.FC = () => {
             flex="1"
             py={{ base: 3, md: 6, lg: 6 }}
           >
-            Download iOS
+            Download on iOS
           </Button>
           <Button
             bg="black"
@@ -77,7 +76,7 @@ const DownloadSection: React.FC = () => {
             flex="1"
             py={{ base: 3, md: 6, lg: 6 }}
           >
-            Download Android
+            Download on Android
           </Button>
         </Flex>
       </Box>
@@ -87,7 +86,7 @@ const DownloadSection: React.FC = () => {
         flex="1"
         borderRadius="md"
         overflow="hidden"
-        p={{ base: 3, md: 4 }}
+        p={{ base: 4, md: 6 }}
         width="100%"
         maxW={{ base: "100%", md: "780px", lg: "100%" }}
       >
@@ -95,7 +94,7 @@ const DownloadSection: React.FC = () => {
           src="/fitness_tracking (1).jpg"
           alt="Running"
           width="100%"
-          height={{ base: "auto", md: "auto", lg: "500px" }} // Reduced height on laptops
+          height={{ base: "auto", md: "auto", lg: "500px" }}
           objectFit="cover"
           borderRadius="md"
           mb={6}
@@ -135,7 +134,7 @@ const DownloadSection: React.FC = () => {
             flex="1"
             py={{ base: 3, md: 6, lg: 6 }}
           >
-            Download iOS
+            Download on iOS
           </Button>
           <Button
             bg="black"
@@ -146,7 +145,7 @@ const DownloadSection: React.FC = () => {
             flex="1"
             py={{ base: 3, md: 6, lg: 6 }}
           >
-            Download Android
+            Download on Android
           </Button>
         </Flex>
       </Box>
