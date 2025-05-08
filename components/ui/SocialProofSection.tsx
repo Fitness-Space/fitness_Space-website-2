@@ -35,26 +35,54 @@ const SocialProofSection: React.FC = () => {
 
       {/* Video Section */}
       <Box width={{ base: "100%", md: "100%" }}>
-        <AspectRatio
-          ratio={16 / 9}
-          width="100%"
-          height={{ base: "400px", md: "600px" }} // Increased height
-        >
-          <video
-            src="/social.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              borderRadius: "20px",
-              boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
-        </AspectRatio>
+        <Box position="relative" width="100%">
+          <AspectRatio
+            ratio={16 / 9}
+            width="100%"
+            height={{ base: "400px", md: "600px" }}
+          >
+            <video
+              src="/social.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.2)",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </AspectRatio>
+
+          {/* Text Overlay */}
+          <Box
+            position="absolute"
+            top={{ base: "40%", md: "45%" }} // Adjusted starting position
+            left="50%"
+            transform="translate(-50%, -50%)"
+            textAlign="center"
+            width="100%"
+            color="white"
+            zIndex={1}
+          >
+            <Heading
+              fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+              fontWeight="bold"
+              fontStyle="italic" // Added italic
+              textShadow="0 2px 4px rgba(0,0,0,0.5)"
+              lineHeight={{ base: "1.2", md: "1.3" }}
+              mt={{ base: "-6", md: "-8" }} // Increased negative margin to move up more
+              mb={4}
+              position="relative" // Ensures negative margin works properly
+              top={{ base: "-10px", md: "-15px" }} // Additional pixel adjustment
+            >
+              This mockup video will be replaced with a live video of the app
+            </Heading>
+          </Box>
+        </Box>
         <Heading fontSize="3xl" fontWeight="bold" mt={6} color="black">
           Your All-in-One Fitness Hub
         </Heading>
