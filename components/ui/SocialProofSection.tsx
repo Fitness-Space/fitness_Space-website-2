@@ -57,32 +57,31 @@ const SocialProofSection: React.FC = () => {
             />
           </AspectRatio>
 
-          {/* Text Overlay */}
+          {/* Text Overlay - Positioned at very bottom */}
           <Box
             position="absolute"
-            top={{ base: "40%", md: "45%" }} // Adjusted starting position
+            bottom={{ base: "8px", md: "8px" }} // Moved down closer to bottom edge
             left="50%"
-            transform="translate(-50%, -50%)"
+            transform="translateX(-50%)"
             textAlign="center"
             width="100%"
             color="white"
             zIndex={1}
+            px={4}
           >
             <Heading
-              fontSize={{ base: "2xl", md: "4xl", lg: "5xl" }}
+              fontSize={{ base: "xl", md: "2xl", lg: "2xl" }}
               fontWeight="bold"
-              fontStyle="italic" // Added italic
-              textShadow="0 2px 4px rgba(0,0,0,0.5)"
-              lineHeight={{ base: "1.2", md: "1.3" }}
-              mt={{ base: "-6", md: "-8" }} // Increased negative margin to move up more
-              mb={4}
-              position="relative" // Ensures negative margin works properly
-              top={{ base: "-10px", md: "-15px" }} // Additional pixel adjustment
+              fontStyle="italic"
+              textShadow="0 2px 4px rgba(0,0,0,0.8)" // Darker shadow for better contrast
+              lineHeight="1.2"
+              mb={{ base: 2, md: 0 }} // Added margin bottom for breathing room
             >
               This mockup video will be replaced with a live video of the app
             </Heading>
           </Box>
         </Box>
+
         <Heading fontSize="3xl" fontWeight="bold" mt={6} color="black">
           Your All-in-One Fitness Hub
         </Heading>
