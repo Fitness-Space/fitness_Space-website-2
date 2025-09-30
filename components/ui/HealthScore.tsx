@@ -3,6 +3,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 const HealthScore: React.FC = () => {
   return (
     <Box
+      id="Health-score"
       overflow="hidden"
       px={{ base: 4, md: 8, lg: 16 }}
       mt={{ base: 10, md: 16 }}

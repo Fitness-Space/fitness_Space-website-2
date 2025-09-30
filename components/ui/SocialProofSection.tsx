@@ -3,6 +3,7 @@ import { Box, Image, AspectRatio, Heading, Text } from "@chakra-ui/react";
 const SocialProofSection: React.FC = () => {
   return (
     <Box
+      id="community-section"
       display="flex"
       flexDirection={{ base: "column", md: "row" }}
       alignItems="center"

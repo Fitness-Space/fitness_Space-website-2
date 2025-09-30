@@ -5,9 +5,10 @@ import { Box, Button, Heading, Text, Flex, Image } from "@chakra-ui/react";
 const DownloadSection: React.FC = () => {
   return (
     <Flex
+      id="download-section"
       direction={{ base: "column", lg: "row" }}
       gap={{ base: 8, lg: 12 }}
-      px={{ base: 4, md: 8, lg: 12 }}
+      px={{ base: 0, md: 8, lg: 12 }}
       py={{ base: 8, md: 12, lg: 20 }}
       alignItems="flex-start"
       justifyContent="center"
@@ -19,17 +20,19 @@ const DownloadSection: React.FC = () => {
         overflow="hidden"
         p={{ base: 4, md: 6 }}
         width="100%"
-        maxW={{ base: "100%", md: "780px", lg: "100%" }}
+        maxW={{ base: "100%", md: "100%", lg: "100%" }}
       >
         <Image
           src="/nutrient-dense meals (1).jpg"
           alt="Training"
           width="100%"
-          height={{ base: "auto", md: "auto", lg: "500px" }}
-          objectFit="cover"
+          height="auto"
+          maxH={{ base: "200px", md: "300px", lg: "400px" }} // 👈 control height
+          objectFit="contain" // keeps full image visible
           borderRadius="md"
           mb={6}
         />
+
         <Heading
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           fontWeight="bold"

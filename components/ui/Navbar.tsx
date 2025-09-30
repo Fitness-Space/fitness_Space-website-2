@@ -75,7 +75,7 @@ const Navbar = () => {
           >
             <Link
               as={NextLink}
-              href="$1"
+              href="#download-section"
               fontSize="lg"
               fontWeight="bold"
               color="black"
@@ -88,7 +88,7 @@ const Navbar = () => {
             </Link>
             <Link
               as={NextLink}
-              href="$1"
+              href="#Health-score"
               fontSize="lg"
               fontWeight="bold"
               color="black"
@@ -101,7 +101,7 @@ const Navbar = () => {
             </Link>
             <Link
               as={NextLink}
-              href="$1"
+              href="#community-section"
               fontSize="lg"
               fontWeight="bold"
               color="black"
@@ -138,23 +138,36 @@ const Navbar = () => {
                       <Flex direction="column" gap={6}>
                         <Link
                           as={NextLink}
-                          href="/find-a-store"
+                          href="#download-section"
                           fontSize="lg"
                           fontWeight="bold"
                           color="white"
                           _hover={{ textDecoration: "underline" }}
+                          onClick={() => setOpen(false)}
                         >
                           Find a Store
                         </Link>
                         <Link
                           as={NextLink}
-                          href="/about-us"
+                          href="#Health-score"
                           fontSize="lg"
                           fontWeight="bold"
                           color="white"
                           _hover={{ textDecoration: "underline" }}
+                          onClick={() => setOpen(false)}
                         >
                           Health Score
+                        </Link>
+                        <Link
+                          as={NextLink}
+                          href="#community-section"
+                          fontSize="lg"
+                          fontWeight="bold"
+                          color="white"
+                          _hover={{ textDecoration: "underline" }}
+                          onClick={() => setOpen(false)}
+                        >
+                          Community
                         </Link>
                       </Flex>
                     </Drawer.Body>
