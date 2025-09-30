@@ -19,20 +19,18 @@ const DownloadSection: React.FC = () => {
         borderRadius="md"
         overflow="hidden"
         p={{ base: 4, md: 6 }}
-        width="100%"
-        maxW={{ base: "100%", md: "100%", lg: "100%" }}
+        width={{ base: "100%", lg: "50%" }} // full width on mobile
+        maxW={{ base: "100%", md: "780px", lg: "100%" }}
       >
         <Image
           src="/nutrient-dense meals (1).jpg"
           alt="Training"
           width="100%"
-          height="auto"
-          maxH={{ base: "200px", md: "300px", lg: "400px" }} // 👈 control height
-          objectFit="contain" // keeps full image visible
+          height={{ base: "300px", md: "400px", lg: "500px" }} // taller on mobile
+          objectFit="cover" // fills container
           borderRadius="md"
           mb={6}
         />
-
         <Heading
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           fontWeight="bold"
@@ -90,15 +88,15 @@ const DownloadSection: React.FC = () => {
         borderRadius="md"
         overflow="hidden"
         p={{ base: 4, md: 6 }}
-        width="100%"
+        width={{ base: "100%", lg: "50%" }} // full width on mobile
         maxW={{ base: "100%", md: "780px", lg: "100%" }}
       >
         <Image
           src="/fitness_tracking (1).jpg"
           alt="Running"
           width="100%"
-          height={{ base: "auto", md: "auto", lg: "500px" }}
-          objectFit="cover"
+          height={{ base: "300px", md: "400px", lg: "500px" }} // taller on mobile
+          objectFit="cover" // fills container
           borderRadius="md"
           mb={6}
         />
