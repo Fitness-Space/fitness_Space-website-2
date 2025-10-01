@@ -57,7 +57,7 @@ const DownloadSection: React.FC = () => {
           flexDirection={{ base: "column", sm: "row" }}
           justifyContent="flex-start"
         >
-          <Button
+          {/* <Button
             bg="black"
             color="white"
             rounded="full"
@@ -67,7 +67,7 @@ const DownloadSection: React.FC = () => {
             py={{ base: 3, md: 6, lg: 6 }}
           >
             Download on iOS
-          </Button>
+          </Button> */}
           <Button
             bg="black"
             color="white"
@@ -126,7 +126,7 @@ const DownloadSection: React.FC = () => {
           flexDirection={{ base: "column", sm: "row" }}
           justifyContent="flex-start"
         >
-          <Button
+          {/* <Button
             bg="black"
             color="white"
             rounded="full"
@@ -136,7 +136,7 @@ const DownloadSection: React.FC = () => {
             py={{ base: 3, md: 6, lg: 6 }}
           >
             Download on iOS
-          </Button>
+          </Button> */}
           <Button
             bg="black"
             color="white"

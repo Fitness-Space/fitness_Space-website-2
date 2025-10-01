@@ -6,55 +6,57 @@ const pricingPlans = [
   {
     price: "4,500/month",
     features: [
-      "Intermittent fasting guide (14:10 or 16:8)",
-      "28-day portion-controlled meal plan (easy-to-digest foods)",
-      "Daily detox water reminders",
-      "Light home workouts (10–15 mins, low impact)",
+      "Flexible Intermittent Fasting (14:10 or 16:8)",
+      "30-Day, High-Fiber, Low-Calorie Meal Plan (No portion guesswork)",
+      "Light Daily Home Workouts (Just 10-20 minutes)",
+      "Happy Gut, Flatter Stomach (4 Weight Loss Smoothie to reduce bloating)",
       "Digestive health focus (probiotic foods, fiber goals)",
-      "100+ bonus health points",
+      "Earn Rewards & Stay Motivated (Unlock 100+ bonus points)",
     ],
     mealPlan: (
       <Box textAlign="center">
-        <Text fontWeight="bold">Metabolic Reset</Text>
-        <Text fontStyle="italic">(For beginners or those restarting)</Text>
-      </Box>
-    ),
-  },
-  {
-    price: "13,500/3 months",
-    features: [
-      "Flexible fasting plans (user-adjusted window)",
-      "Moderate workouts (20–30 mins including dance cardio)",
-      "Balanced meal templates with local food swaps",
-      "Step count target: 8,000–10,000/day",
-      "200+ bonus health points",
-    ],
-    mealPlan: (
-      <Box textAlign="center">
-        <Text fontWeight="bold">Sustain Burn</Text>
+        <Text fontWeight="bold">Metabolic Reset Plan</Text>
         <Text fontStyle="italic">
-          For those maintaining progress or want to build consistency
+          (Ideal for beginners or restarting your journey)
         </Text>
       </Box>
     ),
   },
-  {
-    price: "27,000/6 months",
-    features: [
-      "Structured 16:8 fasting with optional OMAD days",
-      "Intense workout circuits (HIIT, Tabata options)",
-      "Low-carb, high-fiber meal plans",
-      "Weekly weight, waist & arm tracking",
-      "High-step targets (12,000–15,000/day)",
-      "Reward boosters: earn 2x Health Score points on hard days",
-    ],
-    mealPlan: (
-      <Box textAlign="center">
-        <Text fontWeight="bold">Burn</Text>
-        <Text fontStyle="italic">Fat loss acceleration</Text>
-      </Box>
-    ),
-  },
+  // {
+  //   price: "13,500/3 months",
+  //   features: [
+  //     "Flexible fasting plans (user-adjusted window)",
+  //     "Moderate workouts (20–30 mins including dance cardio)",
+  //     "Balanced meal templates with local food swaps",
+  //     "Step count target: 8,000–10,000/day",
+  //     "200+ bonus health points",
+  //   ],
+  //   mealPlan: (
+  //     <Box textAlign="center">
+  //       <Text fontWeight="bold">Sustain Burn</Text>
+  //       <Text fontStyle="italic">
+  //         For those maintaining progress or want to build consistency
+  //       </Text>
+  //     </Box>
+  //   ),
+  // },
+  // {
+  //   price: "27,000/6 months",
+  //   features: [
+  //     "Structured 16:8 fasting with optional OMAD days",
+  //     "Intense workout circuits (HIIT, Tabata options)",
+  //     "Low-carb, high-fiber meal plans",
+  //     "Weekly weight, waist & arm tracking",
+  //     "High-step targets (12,000–15,000/day)",
+  //     "Reward boosters: earn 2x Health Score points on hard days",
+  //   ],
+  //   mealPlan: (
+  //     <Box textAlign="center">
+  //       <Text fontWeight="bold">Burn</Text>
+  //       <Text fontStyle="italic">Fat loss acceleration</Text>
+  //     </Box>
+  //   ),
+  // },
 ];
 
 const PricingCards: React.FC = () => {

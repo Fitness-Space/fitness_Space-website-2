@@ -7,18 +7,18 @@ const HeroSection: React.FC = () => {
     <>
       {/* Full-screen Hero Image */}
       <Box
-        height={{ base: "50vh", md: "100vh" }} // smaller height for mobile
+        height={{ base: "50vh", md: "100vh" }}
         width="100%"
         overflow="hidden"
         m={0}
-        p={0}
+        px={{ base: 4, md: 8, lg: 16 }}
       >
         <Image
           src="black-woman-doing-fitness-home.jpg"
           alt="Hero Image"
           objectFit="cover"
           width="100%"
-          height="80%"
+          height={{ base: "80%", md: "100%" }}
         />
       </Box>
 

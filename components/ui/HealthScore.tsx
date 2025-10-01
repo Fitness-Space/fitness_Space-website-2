@@ -42,7 +42,7 @@ const HealthScore: React.FC = () => {
             fontWeight="bold"
             color="black"
           >
-            Track Your Progress. Earn Tokens. Stay Motivated.
+            Track your progress. Earn points. Stay motivated.
           </Text>
           <Text
             fontSize={{ base: "md", md: "lg", lg: "xl" }}
@@ -51,10 +51,9 @@ const HealthScore: React.FC = () => {
             fontWeight="300"
             fontStyle="italic"
           >
-            Accumulate Health Score points for workouts, balanced meals, and
-            consistency. Convert your points into tokens that unlock exclusive
-            benefits—discounts, premium content, and more. Achieve your goals
-            while earning rewards effortlessly!
+            Accumulate health score points for your workouts, healthy meals, and
+            consistency. Convert your points into exclusive benefits and
+            discounts. Achieve your goals while earning rewards effortlessly!
           </Text>
         </Box>
 

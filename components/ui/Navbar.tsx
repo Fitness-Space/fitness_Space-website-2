@@ -21,29 +21,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* <Box bg="gray.100" px={6} py={4}>
-      <Flex align="center" px={12} >
-        <Spacer />
-        <Flex gap={6}>
-          <Link as={NextLink} href="/find-a-store" fontSize="xs"  fontWeight="medium" color="black" _hover={{ color: "gray", textDecoration: "none" }}>
-            Find a Store
-          </Link>
-          <Box className="vertical-line" width="1px" height="20px" bg="black" />
-          <Link as={NextLink} href="/help" fontSize="xs"  fontWeight="medium" color="black" _hover={{ color: "gray", textDecoration: "none" }}>
-            Help
-          </Link>
-          <Box className="vertical-line" width="1px" height="20px" bg="black" />
-          <Link as={NextLink} href="/join-us" fontSize="xs"  fontWeight="medium" color="black" _hover={{ color: "gray", textDecoration: "none" }}>
-            Join Us
-          </Link>
-          <Box className="vertical-line" width="1px" height="20px" bg="black" />
-          <Link as={NextLink} href="/sign-in" fontSize="xs"  fontWeight="medium" color="black" _hover={{ color: "gray", textDecoration: "none" }}>
-            Sign In
-          </Link>
-        </Flex>
-      </Flex>
-    </Box> */}
-
       {/* Second Navbar */}
       <Box bg="white" px={6} py={4}>
         <Flex
@@ -130,6 +107,7 @@ const Navbar = () => {
                     width="100vw" // Full viewport width
                     maxWidth="100vw" // Prevents max-width limitation
                     borderRadius={0} // Removes rounded corners
+                    bg="white"
                   >
                     <Drawer.Header>
                       <Drawer.Title>Menu</Drawer.Title>
@@ -141,7 +119,7 @@ const Navbar = () => {
                           href="#download-section"
                           fontSize="lg"
                           fontWeight="bold"
-                          color="white"
+                          color="black"
                           _hover={{ textDecoration: "underline" }}
                           onClick={() => setOpen(false)}
                         >
@@ -152,7 +130,7 @@ const Navbar = () => {
                           href="#Health-score"
                           fontSize="lg"
                           fontWeight="bold"
-                          color="white"
+                          color="black"
                           _hover={{ textDecoration: "underline" }}
                           onClick={() => setOpen(false)}
                         >
@@ -163,7 +141,7 @@ const Navbar = () => {
                           href="#community-section"
                           fontSize="lg"
                           fontWeight="bold"
-                          color="white"
+                          color="black"
                           _hover={{ textDecoration: "underline" }}
                           onClick={() => setOpen(false)}
                         >
@@ -187,7 +165,7 @@ const Navbar = () => {
         </Flex>
       </Box>
 
-      <Box bg="gray.100" py={8} />
+      {/* <Box bg="gray.400" py={8} /> */}
     </>
   );
 };
