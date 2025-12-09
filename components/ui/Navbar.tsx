@@ -6,166 +6,150 @@ import {
   Link,
   IconButton,
   Image,
-  Drawer,
   Portal,
-  CloseButton,
   Button,
   Spacer,
+  Text,
+  HStack,
+  Drawer,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { LuMenu } from "react-icons/lu";
+import { LuMenu, LuX } from "react-icons/lu";
+import MobileHamburger from "./MobileHamburger";
+// ...existing code...
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("/");
   const [open, setOpen] = useState(false);
+
+  const handleScrollToSection = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <>
-      {/* Second Navbar */}
-      <Box bg="white" px={6} py={4}>
+      <Box
+        bg="white"
+        px={{ base: 3, md: 6 }}
+        py={{ base: 3, md: 4 }}
+        boxShadow="sm"
+      >
         <Flex
           align="center"
+          maxW="1200px"
+          mx="auto"
+          w="100%"
+          gap={{ base: 2, md: 4 }}
           justify="space-between"
-          px={{ base: 2, md: 8 }}
-          py={{ base: 2, md: 4 }}
+          px={0}
+          py={0}
         >
-          {/* Logo Section */}
-          <Box maxWidth={{ base: "100px", md: "200px" }} p={0} m={0}>
-            <Link as={NextLink} href="/">
+          {/* Logo - left */}
+          <Box minW={{ base: "110px", sm: "160px", md: "260px" }}>
+            <Link
+              as={NextLink}
+              href="/"
+              display="flex"
+              alignItems="center"
+              gap={3}
+            >
               <Image
                 src="./logo1.jpeg"
-                alt="Hero Image"
-                width="100%"
-                height="auto"
+                alt="Fitness Space logo"
+                w={{ base: "127px", md: "177px" }}
+                h="25.72px"
                 objectFit="contain"
+                maxW="none"
+                flexShrink={0}
+                display="block"
               />
             </Link>
           </Box>
-          <Spacer />
-          {/* Desktop Navigation Links */}
+
+          {/* Center links */}
           <Flex
             align="center"
+            flex={1}
             justify="flex-end"
-            gap={8}
-            flexGrow={1}
             display={{ base: "none", md: "flex" }}
           >
-            <Link
-              as={NextLink}
-              href="#download-section"
-              fontSize="lg"
-              fontWeight="bold"
-              color="black"
-              _hover={{
-                color: "#f2a412", // Change text color on hover
-                textDecoration: "underline", // Add underline on hover
-              }}
-            >
-              Daily Habits
-            </Link>
-            <Link
-              as={NextLink}
-              href="#Health-score"
-              fontSize="lg"
-              fontWeight="bold"
-              color="black"
-              _hover={{
-                color: "#f2a412", // Change text color on hover
-                textDecoration: "underline", // Add underline on hover
-              }}
-            >
-              Health Score
-            </Link>
-            <Link
-              as={NextLink}
-              href="#community-section"
-              fontSize="lg"
-              fontWeight="bold"
-              color="black"
-              _hover={{
-                color: "#f2a412", // Change text color on hover
-                textDecoration: "underline", // Add underline on hover
-              }}
-            >
-              Community
-            </Link>
+            <HStack gap={8}>
+              <Link
+                href="#landingsection"
+                as={NextLink}
+                onClick={(e) => handleScrollToSection(e, "landingsection")}
+                fontSize="14px"
+                color="black"
+                _hover={{ textDecoration: "underline" }}
+                _focus={{ outline: "none", boxShadow: "none" }}
+              >
+                Why Fitness-Space
+              </Link>
+              <Link
+                as={NextLink}
+                href="#stories"
+                onClick={(e) => handleScrollToSection(e, "stories")}
+                fontSize="14px"
+                color="black"
+                _hover={{ textDecoration: "underline" }}
+                _focus={{ outline: "none", boxShadow: "none" }}
+              >
+                Stories
+              </Link>
+              <Link
+                as={NextLink}
+                href="#healthscore"
+                onClick={(e) => handleScrollToSection(e, "healthscore")}
+                fontSize="14px"
+                color="black"
+                _hover={{ textDecoration: "underline" }}
+                _focus={{ outline: "none", boxShadow: "none" }}
+              >
+                Health Score
+              </Link>
+              <Link
+                as={NextLink}
+                href="#what-we-offer"
+                onClick={(e) => handleScrollToSection(e, "what-we-offer")}
+                fontSize="14px"
+                color="black"
+                _hover={{ textDecoration: "underline" }}
+                _focus={{ outline: "none", boxShadow: "none" }}
+              >
+                What We Offer
+              </Link>
+            </HStack>
           </Flex>
-          {/* Mobile Hamburger Menu */}
-          <Box display={{ base: "block", md: "none" }}>
-            <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)}>
-              <Drawer.Trigger asChild>
-                <IconButton aria-label="Open Menu">
-                  <LuMenu />
-                </IconButton>
-              </Drawer.Trigger>
 
-              <Portal>
-                <Drawer.Backdrop />
-                <Drawer.Positioner>
-                  <Drawer.Content
-                    height="100vh" // Full viewport height
-                    width="100vw" // Full viewport width
-                    maxWidth="100vw" // Prevents max-width limitation
-                    borderRadius={0} // Removes rounded corners
-                    bg="white"
-                  >
-                    <Drawer.Header>
-                      <Drawer.Title>Menu</Drawer.Title>
-                    </Drawer.Header>
-                    <Drawer.Body>
-                      <Flex direction="column" gap={6}>
-                        <Link
-                          as={NextLink}
-                          href="#download-section"
-                          fontSize="lg"
-                          fontWeight="bold"
-                          color="black"
-                          _hover={{ textDecoration: "underline" }}
-                          onClick={() => setOpen(false)}
-                        >
-                          Find a Store
-                        </Link>
-                        <Link
-                          as={NextLink}
-                          href="#Health-score"
-                          fontSize="lg"
-                          fontWeight="bold"
-                          color="black"
-                          _hover={{ textDecoration: "underline" }}
-                          onClick={() => setOpen(false)}
-                        >
-                          Health Score
-                        </Link>
-                        <Link
-                          as={NextLink}
-                          href="#community-section"
-                          fontSize="lg"
-                          fontWeight="bold"
-                          color="black"
-                          _hover={{ textDecoration: "underline" }}
-                          onClick={() => setOpen(false)}
-                        >
-                          Community
-                        </Link>
-                      </Flex>
-                    </Drawer.Body>
-                    <Drawer.Footer>
-                      <Button variant="outline" onClick={() => setOpen(false)}>
-                        Close
-                      </Button>
-                    </Drawer.Footer>
-                    <Drawer.CloseTrigger asChild>
-                      <CloseButton size="sm" />
-                    </Drawer.CloseTrigger>
-                  </Drawer.Content>
-                </Drawer.Positioner>
-              </Portal>
-            </Drawer.Root>
+          <Box display="flex" minW={{ base: "auto", md: "160px" }}>
+            <NextLink href="#health-score" legacyBehavior passHref>
+              <Button
+                as="a"
+                bg="black"
+                color="white"
+                _hover={{ bg: "gray.800" }}
+                borderRadius="7px"
+                px={6}
+                py={3}
+                display={{ base: "none", md: "inline-flex" }}
+              >
+                Get Started
+              </Button>
+            </NextLink>
+
+            {/* Mobile hamburger */}
+            <Box display={{ base: "block", md: "none" }}>
+              <MobileHamburger />
+            </Box>
           </Box>
         </Flex>
       </Box>
-
-      {/* <Box bg="gray.400" py={8} /> */}
     </>
   );
 };

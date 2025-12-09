@@ -23,8 +23,37 @@
   }
 }
 
+/* Responsive Base Styles */
+html {
+  font-size: clamp(14px, 2vw, 16px);
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: "Boldonse", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better mobile touch targets */
+@media (max-width: 768px) {
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }

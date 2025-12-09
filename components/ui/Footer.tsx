@@ -1,176 +1,240 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Link,
-  Text,
-  Icon,
-} from "@chakra-ui/react";
-import { Globe } from "lucide-react";
+import { Box, Flex, Text, Image, Link, VStack } from "@chakra-ui/react";
+import { FaInstagram, FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
 
-const Footer: React.FC = () => {
+const Footer = () => {
+  const handleScrollToSection = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
-    <Box bg="white" color="gray.400" py={10} mb={{ base: 20, md: 30 }} px={12}>
-      <Box bg="gray.100" height="1px" width="100%" />
+    <Box bg="white" w="100%" py={20}>
+      {/* TOP SECTION */}
       <Flex
         direction={{ base: "column", md: "row" }}
         justify="space-between"
-        gap={8}
-        mt={10}
+        align="flex-start"
+        maxW="1200px"
+        mx="auto"
+        px={{ base: 6, md: 8 }}
+        gap={{ base: 10, md: 0 }}
       >
-        {/* Resources Section */}
-        <Box>
-          <Heading fontSize="lg" mb={4} color={"black"}>
-            Resources
-          </Heading>
-          <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
-          >
-            Join an Accountability Group
-          </Link>
-          <br />
-          <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
-          >
-            Track Your Progress
-          </Link>
-          <br />
-          <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
-          >
-            Access Your Meal Plan
-          </Link>
+        {/* BRAND + DESCRIPTION */}
+        <Box maxW="350px">
+          <Image src="./logo1.jpeg" alt="Fitness Space" w="160px" mb={4} />
+
+          <Text fontSize="12px" color="black" lineHeight="1.6" mb={6}>
+            Fitness Space has helped thousands achieve sustainable weight loss
+            and fitness goals through simple daily habits that encourage
+            healthier choices. Our approach has guided over 15,000 users to
+            reach not only their weight-loss targets but also broader wellness
+            goals, building long-term, sustainable well-being.
+          </Text>
+
+          <Text fontWeight="600" color="black" mb={1}>
+            Contact us
+          </Text>
+          <Text fontSize="12px" color="black">
+            support@getfitness.space
+          </Text>
         </Box>
 
-        {/* Help Section */}
-        <Box>
-          <Heading fontSize="lg" mb={4} color={"black"}>
-            Help
-          </Heading>
-          <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
-          >
-            Get Support
-          </Link>
-          <br />
-          <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
-          >
-            FAQs
-          </Link>
-          <br />
-          <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
-          >
-            Contact Team Help
-          </Link>
+        {/* LOCATIONS */}
+        <Box color="black">
+          <Text fontWeight="bold" mb={3}>
+            Office:
+          </Text>
+          <Text fontSize="12px">
+            46 Kenneth Street, Achara Layout, <br />
+            Enugu, Enugu State.
+          </Text>
         </Box>
 
-        {/* Company Section */}
-        <Box>
-          <Heading fontSize="lg" mb={4} color={"black"}>
-            Company
-          </Heading>
+        {/* SERVICES */}
+        <VStack align="flex-start" color="black" gap={1}>
+          <Text fontWeight="bold" mb={3}>
+            Services
+          </Text>
           <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
+            href="/"
+            _focus={{ outline: "none", boxShadow: "none" }}
+            onClick={(e) => handleScrollToSection(e, "intro")}
           >
-            About Fitness Space
+            <Text
+              fontSize="12px"
+              color="black"
+              cursor="pointer"
+              _hover={{ textDecoration: "underline" }}
+            >
+              AI-Powered Meal Plan
+            </Text>
           </Link>
-          <br />
           <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
+            href="/"
+            _focus={{ outline: "none", boxShadow: "none" }}
+            onClick={(e) => handleScrollToSection(e, "intro")}
           >
-            Our Story
+            <Text
+              fontSize="12px"
+              color="black"
+              cursor="pointer"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Portion Control guide
+            </Text>
           </Link>
-          <br />
           <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
+            href="/"
+            _focus={{ outline: "none", boxShadow: "none" }}
+            onClick={(e) => handleScrollToSection(e, "intro")}
           >
-            Careers
+            <Text
+              fontSize="12px"
+              color="black"
+              cursor="pointer"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Home Workout
+            </Text>
           </Link>
-          <br />
           <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
+            href="/"
+            _focus={{ outline: "none", boxShadow: "none" }}
+            onClick={(e) => handleScrollToSection(e, "intro")}
           >
-            Partnerships
+            <Text
+              fontSize="12px"
+              color="black"
+              cursor="pointer"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Intermittent Fasting
+            </Text>
           </Link>
-          <br />
+        </VStack>
+
+        {/* WHY FITNESS SPACE */}
+        <Box color="black">
+          <Text fontWeight="bold" mb={3}>
+            Why Fitness Space
+          </Text>
           <Link
-            href="#"
-            color="gray.400"
-            _hover={{ textDecoration: "underline" }}
+            href="#stories"
+            _focus={{ outline: "none", boxShadow: "none" }}
+            onClick={(e) => handleScrollToSection(e, "stories")}
           >
-            Community Impact
+            <Text
+              fontSize="12px"
+              color="black"
+              cursor="pointer"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Stories
+            </Text>
           </Link>
+          <Text fontSize="12px" color="black">
+            Learn
+          </Text>
+          <Text fontSize="12px" color="black">
+            FAQS
+          </Text>
         </Box>
 
-        <Box>
-          <Flex gap={2} color="gray.500">
-            <Icon as={Globe} boxSize={5} />
-            <Text>Nigeria</Text>
-          </Flex>
-        </Box>
+        {/* LEGAL */}
+        <VStack align="flex-start" color="black" gap={1}>
+          <Text fontWeight="bold" mb={2}>
+            Legal
+          </Text>
+
+          <Link href="/terms" _focus={{ outline: "none", boxShadow: "none" }}>
+            <Text
+              fontSize="12px"
+              cursor="pointer"
+              color="black"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Terms
+            </Text>
+          </Link>
+
+          <Link
+            href="/privacy-policy"
+            _focus={{ outline: "none", boxShadow: "none" }}
+          >
+            <Text
+              fontSize="12px"
+              cursor="pointer"
+              color="black"
+              _hover={{ textDecoration: "underline" }}
+            >
+              Privacy
+            </Text>
+          </Link>
+        </VStack>
       </Flex>
+      <Box
+        height="1px"
+        bg="gray.300"
+        my={6}
+        display={{ base: "none", md: "block" }}
+      />
 
-      {/* Footer Bottom Section */}
+      {/* BOTTOM FOOTER */}
       <Flex
+        justify="flex-end"
+        align="center"
+        maxW="1200px"
+        mx="auto"
+        mt={{ base: 4, md: 10 }}
+        px={{ base: 6, md: 8 }}
         direction={{ base: "column", md: "row" }}
-        gap={12}
-        mt={30}
-        alignItems={{ base: "flex-start", md: "center" }}
-        textAlign={{ base: "left", md: "center" }}
+        gap={{ base: 4, md: 60 }}
       >
-        <Link
-          href="#"
-          color="gray.400"
-          _hover={{ textDecoration: "underline" }}
-        >
-          © 2025 Fitness Space Ltd. All rights reserved
-        </Link>
-        <Link
-          href="#"
-          color="gray.400"
-          _hover={{ textDecoration: "underline" }}
-        >
-          Terms of Use
-        </Link>
-        <Link
-          href="#"
-          color="gray.400"
-          _hover={{ textDecoration: "underline" }}
-        >
-          Privacy Policy
-        </Link>
-        <Link
-          href="#"
-          color="gray.400"
-          _hover={{ textDecoration: "underline" }}
-        >
-          Refund Policy
-        </Link>
+        <Text fontSize="12px" color="#393838">
+          &copy; {new Date().getFullYear()} Fitness space. All Rights Reserved.
+        </Text>
+
+        {/* SOCIAL ICONS */}
+        <Flex gap={6} fontSize="18px" color="black">
+          <Link
+            href="https://www.instagram.com/getfitness.space"
+            target="_blank"
+            color="black"
+          >
+            <FaInstagram />
+          </Link>
+
+          <Link
+            href="https://www.twitter.com/FitnessSpace_Ng"
+            target="_blank"
+            color="black"
+          >
+            <FaTwitter />
+          </Link>
+
+          <Link
+            href="https://www.youtube.com/@fitnessspace1410"
+            target="_blank"
+            color="black"
+          >
+            <FaYoutube />
+          </Link>
+
+          <Link
+            href="https://www.tiktok.com/@getfitness.space"
+            target="_blank"
+            color="black"
+          >
+            <FaTiktok />
+          </Link>
+        </Flex>
       </Flex>
     </Box>
   );
