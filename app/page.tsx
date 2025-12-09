@@ -1,24 +1,32 @@
 import Image from "next/image";
-import { ChakraProvider } from "@chakra-ui/react";
-import DiscoverSection from "@/components/ui/DiscoverSection";
-import DownloadSection from "@/components/ui/DownloadSection";
 import Footer from "@/components/ui/Footer";
 import HeroSection from "@/components/ui/HeroSection";
 import Navbar from "@/components/ui/Navbar";
 import PricingModal from "@/components/ui/PricingModal";
-import HealthScore from "@/components/ui/HealthScore";
 import SocialProofSection from "@/components/ui/SocialProofSection";
+import LandingSection from "@/components/ui/LandingSection";
+import FitnessIntro from "@/components/ui/FitnessIntro";
+import SuccessScoreSection from "@/components/ui/SuccessScoreSection";
+import FitnessTransformations from "@/components/ui/FitnessTransformations";
+import PricingSection from "@/components/ui/PricingSection";
+import CoachesSection from "@/components/ui/CoachesSection";
+import ArticlesSection from "@/components/ui/ArticlesSection";
+import AppDownloadBanner from "@/components/ui/DownloadAppSection";
+import DownloadAppSection from "@/components/ui/DownloadAppSection";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <HeroSection />
-      {/* <DiscoverSection /> */}
-      <DownloadSection />
-      <HealthScore />
-      <PricingModal />
-      <SocialProofSection />
+      <LandingSection />
+      <FitnessIntro />
+      <SuccessScoreSection />
+      <FitnessTransformations />
+      <PricingSection />
+      <CoachesSection />
+      <ArticlesSection />
+      <DownloadAppSection />
       <Footer />
     </div>
   );
