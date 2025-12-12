@@ -35,23 +35,24 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <Flex
-      width={{ base: "100%", md: "1004px" }}
+    <Box
+      width="100%"
       mx="auto"
-      justify="center"
-      py={20}
+      py={{ base: 8, md: 20 }}
       px={{ base: 4, md: 4 }}
+      bg="white"
     >
       <Flex
         maxW="1100px"
         w="100%"
-        justify="space-between"
-        align="flex-start"
-        gap={{ base: 12, md: 10 }}
+        mx="auto"
+        justify="center"
+        align="center"
+        gap={{ base: 8, md: 10 }}
         direction={{ base: "column", md: "row" }}
       >
         {/* TEXT SECTION */}
-        <Box flex="1" textAlign={{ base: "center", md: "left" }}>
+        <Box flex="1" textAlign={{ base: "center", md: "left" }} w="100%">
           {/* DESKTOP TEXT */}
           <Text
             fontSize="3xl"
@@ -59,6 +60,7 @@ const PricingSection = () => {
             lineHeight="1.2"
             color="#141414"
             display={{ base: "none", md: "block" }}
+            textAlign="center"
           >
             Kick-start your <br />
             <Box
@@ -75,59 +77,83 @@ const PricingSection = () => {
 
           {/* MOBILE TEXT */}
           <Text
-            fontSize="26px"
+            fontSize="24px"
             fontWeight="bold"
-            lineHeight="1.2"
+            lineHeight="1.3"
             color="#141414"
             display={{ base: "block", md: "none" }}
             mx="auto"
-            maxW="310px"
           >
-            Kick-start your wellness journey with your preferred plan.
+            Kick-start your <br /> wellness journey with <br /> your preferred
+            plan.
           </Text>
         </Box>
 
         {/* PRICE CARDS */}
         <Flex
-          flex="2"
-          gap={{ base: 6, md: 6 }}
+          flex={{ base: "1", md: "2" }}
+          gap={{ base: 4, md: 6 }}
           direction={{ base: "column", md: "row" }}
+          w={{ base: "100%", md: "auto" }}
+          maxW="100%"
         >
           {plans.map((plan, index) => (
             <Box
               key={index}
-              border="1px solid #e7e7e7"
-              borderRadius="xl"
-              p={{ base: 5, md: 6 }}
-              flex="1"
-              w={{ base: "100%", md: "auto" }} // FULL WIDTH ON MOBILE
-              boxShadow={{ base: "sm", md: "none" }} // MOBILE CARD POP
+              border="1px solid #3C3C3C"
+              borderRadius="10px"
+              px={{ base: 12, md: 12 }}
+              py={{ base: 8, md: 8 }}
+              flex={{ base: "1", md: "1" }}
+              w={{ base: "100%", md: "auto" }}
+              boxShadow="0 2px 12px rgba(0,0,0,0.06)"
+              bg="white"
+              transition="all 0.3s ease"
+              _hover={{ boxShadow: "0 4px 16px rgba(0,0,0,0.1)" }}
             >
-              <Text fontWeight="bold" fontSize="lg" color="#141414">
+              <Text
+                fontWeight="700"
+                fontSize={{ base: "20px", md: "20px" }}
+                color="#141414"
+                mb={1}
+              >
                 {plan.title}
               </Text>
 
-              <Text fontSize="sm" color="#666">
+              <Text fontSize={{ base: "13px", md: "14px" }} color="#777" mb={4}>
                 {plan.subtitle}
               </Text>
 
-              <Text fontWeight="bold" fontSize="3xl" mt={4} color="#141414">
+              <Text
+                fontWeight="700"
+                fontSize={{ base: "36px", md: "40px" }}
+                mt={3}
+                mb={1}
+                color="#141414"
+              >
                 {plan.price}
               </Text>
 
-              <Text fontSize="sm" color="#444">
+              <Text fontSize={{ base: "12px", md: "13px" }} color="#999" mb={6}>
                 {plan.duration}
               </Text>
 
-              <Stack mt={5} gap={3}>
+              <Stack mt={4} gap={{ base: 3.5, md: 4 }}>
                 {plan.features.map((f, i) => (
-                  <Flex key={i} align="center" gap={3}>
+                  <Flex key={i} gap={3} align="center">
                     <Icon
                       as={f.ok ? CheckCircleMiniIcon : CloseCircleMiniIcon}
-                      color={f.ok ? "green.500" : "red.300"}
-                      boxSize={4}
+                      color={f.ok ? "#3CA836" : "#FF6B6B"}
+                      boxSize={{ base: 5, md: 5 }}
+                      mt={0.5}
+                      flexShrink={0}
                     />
-                    <Text fontSize="sm" color="#141414">
+                    <Text
+                      fontSize={{ base: "13px", md: "14px" }}
+                      color="#141414"
+                      lineHeight="1.5"
+                      mt={0.5}
+                    >
                       {f.text}
                     </Text>
                   </Flex>
@@ -137,7 +163,7 @@ const PricingSection = () => {
           ))}
         </Flex>
       </Flex>
-    </Flex>
+    </Box>
   );
 };
 

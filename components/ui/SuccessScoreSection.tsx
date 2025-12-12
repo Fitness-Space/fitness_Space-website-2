@@ -32,7 +32,7 @@ const SuccessScoreSection: FC = () => {
           Track journey your with health score
         </Box>
 
-        <Box py={{ base: 0, md: 12 }}>
+        <Box py={{ base: 2, md: 2 }}>
           {/* Heading */}
           <Text
             fontSize={{ base: "30px", md: "42px" }}
@@ -68,41 +68,41 @@ const SuccessScoreSection: FC = () => {
           display="flex"
           flexWrap="wrap"
           justifyContent="center"
-          gap={6}
-          py={{ base: 0, md: 4 }}
+          gap={4}
+          py={{ base: 2, md: 4 }}
         >
           <Button
             bg="#141414"
             color="white"
-            px={10}
-            py={{ base: 6, md: 5 }}
+            px={16}
+            py={{ base: 8, md: 6 }}
             borderRadius="4px"
             display="flex"
             alignItems="center"
             gap={2}
             fontSize="base"
             _hover={{ bg: "black" }}
-            width={{ base: "270px", md: "auto" }} // ← mobile only
+            width={{ base: "100%", md: "auto" }}
           >
-            <Image src="/android_image.png" boxSize="12px" />
-            <Text fontSize={12}>Get on Android</Text>
+            <PaperPlaneIcon />
+            <Text fontSize={14}>Get on Android</Text>
           </Button>
 
           <Button
             bg="#141414"
             color="white"
-            px={12}
-            py={{ base: 6, md: 5 }}
+            px={16}
+            py={{ base: 8, md: 6 }}
             borderRadius="4px"
             display="flex"
             alignItems="center"
             gap={2}
             fontSize="base"
             _hover={{ bg: "black" }}
-            width={{ base: "270px", md: "auto" }} // ← mobile only
+            width={{ base: "100%", md: "auto" }}
           >
-            <Image src="/ios_image.png" boxSize="12px" />
-            <Text fontSize={12}>Get on iOS</Text>
+            <HeartIcon />
+            <Text fontSize={14}>Get on iOS</Text>
           </Button>
         </Box>
       </Box>

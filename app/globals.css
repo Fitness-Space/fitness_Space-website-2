@@ -48,7 +48,7 @@ img {
   button,
   a,
   [role="button"] {
-    min-height: 44px;
+    min-height: 20px;
   }
 }
 

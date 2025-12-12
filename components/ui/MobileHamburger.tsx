@@ -19,8 +19,8 @@ const MobileHamburger = () => {
   return (
     <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)}>
       <Drawer.Trigger asChild>
-        <IconButton aria-label="Open Menu">
-          <LuMenu />
+        <IconButton aria-label="Open Menu" size="2xl">
+          <LuMenu size={30} />
         </IconButton>
       </Drawer.Trigger>
 
@@ -45,15 +45,15 @@ const MobileHamburger = () => {
                 <Image
                   src="/logo1.jpeg"
                   alt="logo"
-                  w="127px"
+                  w="150px"
                   h="auto"
                   objectFit="contain"
                 />
               </NextLink>
 
               <Drawer.CloseTrigger asChild>
-                <IconButton aria-label="Close Menu">
-                  <LuX />
+                <IconButton aria-label="Close Menu" size="lg">
+                  <LuX size={28} />
                 </IconButton>
               </Drawer.CloseTrigger>
             </Drawer.Header>

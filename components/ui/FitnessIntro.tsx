@@ -7,8 +7,8 @@ const FitnessIntro = () => {
   return (
     <Box
       id="intro"
-      px={{ base: 4, sm: 3, md: 0 }}
-      py={{ base: 8, sm: 12, md: 20 }}
+      px={{ base: 5, sm: 5, md: 0 }}
+      py={{ base: 10, sm: 12, md: 20 }}
       width={{ base: "100%", md: "1004px" }}
       mx="auto"
     >
@@ -17,14 +17,14 @@ const FitnessIntro = () => {
         id="intro"
         bg="black"
         color="white"
-        px={{ base: 4, md: 6 }}
-        py={2}
+        px={{ base: 6, md: 6 }}
+        py={{ base: 4, md: 2 }}
         borderRadius="full"
         textAlign="center"
         mx="auto"
         width="fit-content"
-        fontSize={{ base: "xs", md: "sm" }}
-        fontWeight="medium"
+        fontSize={{ base: "12px", md: "12px" }}
+        fontWeight="bold"
         mb={{ base: 4, md: 6 }}
       >
         Your fitness journey starts here
@@ -43,12 +43,16 @@ const FitnessIntro = () => {
           lineHeight={{ base: "1.2", md: "0.7" }}
           my="1"
         >
-          Your four-in-one fitness app
+          Your four-in-one{" "}
+          <Text as="span" display={{ base: "block", md: "inline" }}>
+            fitness app
+          </Text>
         </Text>
         <Text
-          fontSize={{ base: "sm", md: "16px" }}
+          py={{ base: 4, md: 0 }}
+          fontSize={{ base: "16px", md: "16px" }}
           color={"#141414"}
-          maxW={{ base: "100%", md: "376px" }}
+          maxW={{ base: "100%", md: "500px" }}
         >
           Designed to empower you to achieve, manage, and strengthen your
           fitness goals through daily home workouts, nutrient-dense meals,
@@ -77,8 +81,8 @@ const FitnessIntro = () => {
           <Image
             src="fitness-yellow-image.png"
             width={{ base: "100%", md: "100%" }}
-            maxW={{ base: "300px", md: "100%" }}
-            h={{ base: "383.99px", md: "" }}
+            maxW={{ base: "100%", md: "100%" }}
+            h={{ base: "", md: "" }}
             alt="App Preview"
             borderRadius={{ base: "24px", md: "" }}
           />

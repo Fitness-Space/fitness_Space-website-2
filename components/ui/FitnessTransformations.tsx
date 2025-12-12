@@ -76,8 +76,11 @@ const FitnessTransformations = () => {
         >
           Transformations that keep us going
         </Text>
-        <Text fontSize={{ base: "md", md: "14px" }} color="#141414">
-          Stories of people that took their fitness journey from zero to 100
+        <Text fontSize="16px" color="#141414">
+          Stories of people that took their fitness{" "}
+          <Text as="span" display={{ base: "block", md: "inline" }}>
+            journey from zero to 100
+          </Text>
         </Text>
       </VStack>
 

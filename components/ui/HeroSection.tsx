@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 import { LuCheck } from "react-icons/lu";
+import { HeartIcon, PaperPlaneIcon } from "./icon";
 
 export default function Hero() {
   const featureList = [
@@ -21,7 +22,7 @@ export default function Hero() {
     <Box
       px={{ base: 4, md: 16 }}
       position="relative"
-      height="90vh"
+      height="100vh"
       bgImage={{
         base: "url('/heroimage-mobile.png')", // Mobile
         md: "url('/hero-bg.png')", // Desktop
@@ -38,15 +39,15 @@ export default function Hero() {
         justify="center"
         align="flex-start"
         height="100%"
-        pt={{ base: "20px", md: "70px" }}
+        pt={{ base: "80px", md: "70px" }}
       >
         <VStack gap={4} maxW="954px" textAlign="center" px={4}>
           <Text
             bg="whiteAlpha.300"
-            px={{ base: 4, md: 7 }}
-            py={{ base: 1.5, md: 2 }}
+            px={{ base: 8, md: 8 }}
+            py={{ base: 2, md: 2 }}
             rounded="full"
-            fontSize={{ base: 9, md: 11 }}
+            fontSize={{ base: 12, md: 12 }}
             fontWeight="bold"
           >
             Your fitness Journey Starts Here
@@ -60,7 +61,7 @@ export default function Hero() {
             A Healthier Way to Lose Weight and Stay Fit.
           </Heading>
           <Flex
-            py={3}
+            py={{ base: 4, md: 6 }}
             gap={4}
             wrap={{ base: "nowrap", md: "wrap" }}
             direction={{ base: "column", md: "row" }}
@@ -69,39 +70,57 @@ export default function Hero() {
             {featureList.map((item) => (
               <Flex key={item.id} gap={1} align="center">
                 <LuCheck size={15} color="#3CA836" />
-                <Text fontSize={12} fontWeight="semibold">
+                <Text fontSize={14} fontWeight="semibold">
                   {item.label}
                 </Text>
               </Flex>
             ))}
           </Flex>
 
-          <Flex
-            direction={{ base: "column", md: "row" }}
-            justify="center"
-            gap={{ base: 2, md: 4 }}
-            w={{ base: "100%", md: "auto" }}
-            px={{ base: 4, md: 0 }}
+          <Box
+            display="flex"
+            flexWrap="wrap"
+            justifyContent="center"
+            gap={6}
+            py={{ base: 0, md: 4 }}
+            w="100%"
           >
-            <Button variant="outline" borderColor="white" color="white" w={{ base: "100%", md: "auto" }}>
-              <Flex
-                px={{ base: 4, md: 6 }}
-                py={{ base: 1.5, md: 2 }}
-                align="center"
-                gap={2}
-              >
-                <Image src="/android_image.png" boxSize={{ base: "10px", md: "12px" }} />
-                <Text fontSize={{ base: 10, md: 12 }}>Get on Android</Text>
-              </Flex>
+            <Button
+              bg="rgba(255, 255, 255, 0.1)"
+              color="white"
+              px={16}
+              py={{ base: 6, md: 6 }}
+              borderRadius="5px"
+              border="1px solid white"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              fontSize="base"
+              _hover={{ bg: "rgba(255, 255, 255, 0.2)" }}
+              width={{ base: "100%", md: "auto" }}
+            >
+              <PaperPlaneIcon />
+              <Text fontSize={14}>Get on Android</Text>
             </Button>
 
-            <Button variant="outline" borderColor="white" color="white" w={{ base: "100%", md: "auto" }}>
-              <Flex px={{ base: 4, md: 5 }} py={{ base: 1.5, md: 2 }} align="center" gap={2}>
-                <Image src="/ios_image.png" boxSize={{ base: "10px", md: "12px" }} />
-                <Text fontSize={{ base: 10, md: 12 }}>Get on iOS</Text>
-              </Flex>
+            <Button
+              bg="rgba(255, 255, 255, 0.1)"
+              color="white"
+              px={16}
+              py={{ base: 6, md: 6 }}
+              borderRadius="5px"
+              border="1px solid white"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              fontSize="base"
+              _hover={{ bg: "rgba(255, 255, 255, 0.2)" }}
+              width={{ base: "100%", md: "auto" }}
+            >
+              <HeartIcon />
+              <Text fontSize={14}>Get on iOS</Text>
             </Button>
-          </Flex>
+          </Box>
         </VStack>
       </Flex>
     </Box>

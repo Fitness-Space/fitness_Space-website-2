@@ -36,7 +36,7 @@ const Navbar = () => {
     <>
       <Box
         bg="white"
-        px={{ base: 3, md: 6 }}
+        px={{ base: 4, md: 6 }}
         py={{ base: 3, md: 4 }}
         boxShadow="sm"
       >
@@ -51,7 +51,7 @@ const Navbar = () => {
           py={0}
         >
           {/* Logo - left */}
-          <Box minW={{ base: "110px", sm: "160px", md: "260px" }}>
+          <Box minW={{ base: "140px", sm: "160px", md: "260px" }}>
             <Link
               as={NextLink}
               href="/"
@@ -62,8 +62,8 @@ const Navbar = () => {
               <Image
                 src="./logo1.jpeg"
                 alt="Fitness Space logo"
-                w={{ base: "127px", md: "177px" }}
-                h="25.72px"
+                w={{ base: "150px", md: "177px" }}
+                h={{ base: "30px", md: "25.72px" }}
                 objectFit="contain"
                 maxW="none"
                 flexShrink={0}

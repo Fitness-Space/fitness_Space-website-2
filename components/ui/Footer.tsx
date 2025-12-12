@@ -58,8 +58,13 @@ const Footer = () => {
         </Box>
 
         {/* SERVICES */}
-        <VStack align="flex-start" color="black" gap={1}>
-          <Text fontWeight="bold" mb={3}>
+        <Flex
+          direction="column"
+          align="flex-start"
+          color="black"
+          gap={{ base: 0, md: 1 }}
+        >
+          <Text fontWeight="bold" mb={{ base: 0, md: 3 }}>
             Services
           </Text>
           <Link
@@ -118,7 +123,7 @@ const Footer = () => {
               Intermittent Fasting
             </Text>
           </Link>
-        </VStack>
+        </Flex>
 
         {/* WHY FITNESS SPACE */}
         <Box color="black">
@@ -148,8 +153,8 @@ const Footer = () => {
         </Box>
 
         {/* LEGAL */}
-        <VStack align="flex-start" color="black" gap={1}>
-          <Text fontWeight="bold" mb={2}>
+        <Flex direction="column" align="flex-start" color="black" gap={1}>
+          <Text fontWeight="bold" mb={0}>
             Legal
           </Text>
 
@@ -177,7 +182,7 @@ const Footer = () => {
               Privacy
             </Text>
           </Link>
-        </VStack>
+        </Flex>
       </Flex>
       <Box
         height="1px"
@@ -202,7 +207,7 @@ const Footer = () => {
         </Text>
 
         {/* SOCIAL ICONS */}
-        <Flex gap={6} fontSize="18px" color="black">
+        <Flex gap={6} fontSize="18px" color="#6B6666">
           <Link
             href="https://www.instagram.com/getfitness.space"
             target="_blank"

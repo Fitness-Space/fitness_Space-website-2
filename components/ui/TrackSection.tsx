@@ -73,7 +73,20 @@ const TrackSection = () => {
           }
         >
           {/* TOP ROW WITH ICON + TITLE */}
-          <HStack gap={3}>
+          <HStack
+            gap={3}
+            bg={{ base: "rgba(252, 252, 252, 0.1)", md: "transparent" }}
+            border={{ base: "1px solid #FCFCFC", md: "none" }}
+            p={{ base: 4, md: 0 }}
+            borderRadius={{ base: "6px", md: "0" }}
+            boxShadow={{
+              base:
+                activeIndex === index
+                  ? "none"
+                  : "0 2px 8px rgba(0, 0, 0, 0.08)",
+              md: "none",
+            }}
+          >
             <Box w="22px">{feature.icon}</Box>
             <Text
               fontWeight={activeIndex === index ? "bold" : "medium"}
