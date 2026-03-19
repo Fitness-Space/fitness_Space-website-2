@@ -61,22 +61,29 @@ const DownloadAppSection = () => {
             direction={{ base: "column", md: "row" }}
             align={{ base: "center", md: "flex-start" }}
           >
-            <Button
-              variant="outline"
-              borderColor="white"
-              color="white"
-              _hover={{ bg: "whiteAlpha.200" }}
-              px={{ base: 6, md: 8 }}
-              py={5}
-              display="flex"
-              alignItems="center"
-              gap={2}
-              width={{ base: "100%", md: "auto" }}
-              maxW="260px"
+            <a
+              href="https://play.google.com/store/apps/details?id=com.fitnessspace.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
             >
-              <Image src="/android_image.png" boxSize="14px" alt="Android" />
-              Get on Android
-            </Button>
+              <Button
+                variant="outline"
+                borderColor="white"
+                color="white"
+                _hover={{ bg: "whiteAlpha.200" }}
+                px={{ base: 6, md: 8 }}
+                py={5}
+                display="flex"
+                alignItems="center"
+                gap={2}
+                width={{ base: "100%", md: "auto" }}
+                maxW="260px"
+              >
+                <Image src="/android_image.png" boxSize="14px" alt="Android" />
+                Get on Android
+              </Button>
+            </a>
 
             <Button
               variant="outline"
