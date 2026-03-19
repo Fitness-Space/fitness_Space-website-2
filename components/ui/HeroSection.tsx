@@ -85,40 +85,51 @@ export default function Hero() {
             py={{ base: 0, md: 4 }}
             w="100%"
           >
-            <Button
-              bg="rgba(255, 255, 255, 0.1)"
-              color="white"
-              px={16}
-              py={{ base: 6, md: 6 }}
-              borderRadius="5px"
-              border="1px solid white"
-              display="flex"
-              alignItems="center"
-              gap={2}
-              fontSize="base"
-              _hover={{ bg: "rgba(255, 255, 255, 0.2)" }}
-              width={{ base: "100%", md: "auto" }}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.fitnessspace.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
             >
-              <PaperPlaneIcon />
-              <Text fontSize={14}>Get on Android</Text>
-            </Button>
+              <Button
+                variant="outline"
+                borderColor="white"
+                color="white"
+                w={{ base: "100%", md: "auto" }}
+              >
+                <Flex
+                  px={{ base: 4, md: 6 }}
+                  py={{ base: 1.5, md: 2 }}
+                  align="center"
+                  gap={2}
+                >
+                  <Image
+                    src="/android_image.png"
+                    boxSize={{ base: "10px", md: "12px" }}
+                  />
+                  <Text fontSize={{ base: 10, md: 12 }}>Get on Android</Text>
+                </Flex>
+              </Button>
+            </a>
 
             <Button
-              bg="rgba(255, 255, 255, 0.1)"
+              variant="outline"
+              borderColor="white"
               color="white"
-              px={16}
-              py={{ base: 6, md: 6 }}
-              borderRadius="5px"
-              border="1px solid white"
-              display="flex"
-              alignItems="center"
-              gap={2}
-              fontSize="base"
-              _hover={{ bg: "rgba(255, 255, 255, 0.2)" }}
-              width={{ base: "100%", md: "auto" }}
+              w={{ base: "100%", md: "auto" }}
             >
-              <HeartIcon />
-              <Text fontSize={14}>Get on iOS</Text>
+              <Flex
+                px={{ base: 4, md: 5 }}
+                py={{ base: 1.5, md: 2 }}
+                align="center"
+                gap={2}
+              >
+                <Image
+                  src="/ios_image.png"
+                  boxSize={{ base: "10px", md: "12px" }}
+                />
+                <Text fontSize={{ base: 10, md: 12 }}>Get on iOS</Text>
+              </Flex>
             </Button>
           </Box>
         </VStack>

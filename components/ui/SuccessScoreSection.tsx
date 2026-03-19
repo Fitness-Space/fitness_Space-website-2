@@ -71,22 +71,29 @@ const SuccessScoreSection: FC = () => {
           gap={4}
           py={{ base: 2, md: 4 }}
         >
-          <Button
-            bg="#141414"
-            color="white"
-            px={16}
-            py={{ base: 8, md: 6 }}
-            borderRadius="4px"
-            display="flex"
-            alignItems="center"
-            gap={2}
-            fontSize="base"
-            _hover={{ bg: "black" }}
-            width={{ base: "100%", md: "auto" }}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.fitnessspace.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
           >
-            <PaperPlaneIcon />
-            <Text fontSize={14}>Get on Android</Text>
-          </Button>
+            <Button
+              bg="#141414"
+              color="white"
+              px={10}
+              py={{ base: 6, md: 5 }}
+              borderRadius="4px"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              fontSize="base"
+              _hover={{ bg: "black" }}
+              width={{ base: "270px", md: "auto" }} // ← mobile only
+            >
+              <Image src="/android_image.png" boxSize="12px" />
+              <Text fontSize={12}>Get on Android</Text>
+            </Button>
+          </a>
 
           <Button
             bg="#141414"
