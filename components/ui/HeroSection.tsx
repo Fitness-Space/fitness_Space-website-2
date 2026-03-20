@@ -37,9 +37,9 @@ export default function Hero() {
         position="relative"
         zIndex={2}
         justify="center"
-        align="flex-start"
+        align={{ base: "center", md: "flex-start" }}
         height="100%"
-        pt={{ base: "80px", md: "70px" }}
+        py={{ base: 8, md: "80px" }}
       >
         <VStack gap={4} maxW="954px" textAlign="center" px={4}>
           <Text
@@ -76,62 +76,6 @@ export default function Hero() {
               </Flex>
             ))}
           </Flex>
-
-          <Box
-            display="flex"
-            flexWrap="wrap"
-            justifyContent="center"
-            gap={6}
-            py={{ base: 0, md: 4 }}
-            w="100%"
-          >
-            <a
-              href="https://play.google.com/store/apps/details?id=com.fitnessspace.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Button
-                variant="outline"
-                borderColor="white"
-                color="white"
-                w={{ base: "100%", md: "auto" }}
-              >
-                <Flex
-                  px={{ base: 4, md: 6 }}
-                  py={{ base: 1.5, md: 2 }}
-                  align="center"
-                  gap={2}
-                >
-                  <Image
-                    src="/android_image.png"
-                    boxSize={{ base: "10px", md: "12px" }}
-                  />
-                  <Text fontSize={{ base: 10, md: 12 }}>Get on Android</Text>
-                </Flex>
-              </Button>
-            </a>
-
-            <Button
-              variant="outline"
-              borderColor="white"
-              color="white"
-              w={{ base: "100%", md: "auto" }}
-            >
-              <Flex
-                px={{ base: 4, md: 5 }}
-                py={{ base: 1.5, md: 2 }}
-                align="center"
-                gap={2}
-              >
-                <Image
-                  src="/ios_image.png"
-                  boxSize={{ base: "10px", md: "12px" }}
-                />
-                <Text fontSize={{ base: 10, md: 12 }}>Get on iOS</Text>
-              </Flex>
-            </Button>
-          </Box>
         </VStack>
       </Flex>
     </Box>

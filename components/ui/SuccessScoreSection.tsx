@@ -1,10 +1,32 @@
 "use client";
 
-import { FC } from "react";
-import { Text, Box, Button, Image } from "@chakra-ui/react";
-import { HeartIcon, PaperPlaneIcon } from "./icon";
+import { FC, useState } from "react";
+import { Text, Box, Button } from "@chakra-ui/react";
 
 const SuccessScoreSection: FC = () => {
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+
+    if (/android/i.test(userAgent)) {
+      // Android → Play Store
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.fitnessspace.app",
+        "_blank",
+      );
+    } else if (/iphone|ipad|ipod/i.test(userAgent)) {
+      // iOS → App Store (Instagram used for testing)
+      window.open("https://apps.apple.com/app/id389801252", "_blank");
+    } else {
+      // Desktop → show message
+      setShowMessage(true);
+
+      // Auto hide after 4 seconds
+      setTimeout(() => setShowMessage(false), 4000);
+    }
+  };
+
   return (
     <Box
       id="healthscore"
@@ -15,6 +37,7 @@ const SuccessScoreSection: FC = () => {
       px={{ base: 4, sm: 3, md: 0 }}
     >
       <Box mx="auto" textAlign="center">
+        {/* Tag */}
         <Box
           fontWeight="bold"
           fontSize="11px"
@@ -26,92 +49,64 @@ const SuccessScoreSection: FC = () => {
           px={6}
           py={3}
           borderRadius="full"
-          textAlign="center"
-          width="fit-content"
         >
           Track journey your with health score
         </Box>
 
+        {/* Heading + Description */}
         <Box py={{ base: 2, md: 2 }}>
-          {/* Heading */}
           <Text
             fontSize={{ base: "30px", md: "42px" }}
             fontWeight="extrabold"
             color="#141414"
             mb={4}
-            lineHeight={{ base: "1.5", md: "0.8" }}
+            lineHeight={{ base: "1.5", md: "1.1" }}
           >
             See Your Success in One Simple Score
           </Text>
 
-          {/* Description */}
           <Text
-            py={{ base: 0, md: 2 }}
             color="#141414"
             opacity={0.9}
             maxW={{ base: "341px", md: "700px" }}
             mx="auto"
-            fontSize={{ base: "16px", md: "16px" }}
+            fontSize="16px"
             mb={6}
             lineHeight="26px"
-            fontWeight={{ base: "normal", md: "medium" }}
           >
             Turn your meals, workouts, and habits into measurable progress and
             earn Health Score Points. The higher your Health Score, the faster
-            your results and the less you pay on your next subscription. Enjoy a
-            14-day free trial and only pay after you start seeing real results.
+            your results and the less you pay on your next subscription.
           </Text>
         </Box>
 
-        {/* Buttons */}
-        <Box
-          display="flex"
-          flexWrap="wrap"
-          justifyContent="center"
-          gap={4}
-          py={{ base: 2, md: 4 }}
-        >
-          <a
-            href="https://play.google.com/store/apps/details?id=com.fitnessspace.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block"
-          >
-            <Button
-              bg="#141414"
-              color="white"
-              px={10}
-              py={{ base: 6, md: 5 }}
-              borderRadius="4px"
-              display="flex"
-              alignItems="center"
-              gap={2}
-              fontSize="base"
-              _hover={{ bg: "black" }}
-              width={{ base: "270px", md: "auto" }} // ← mobile only
-            >
-              <Image src="/android_image.png" boxSize="12px" />
-              <Text fontSize={12}>Get on Android</Text>
-            </Button>
-          </a>
-
+        {/* Button */}
+        <Box display="flex" justifyContent="center" py={{ base: 2, md: 4 }}>
           <Button
+            onClick={handleDownload}
             bg="#141414"
             color="white"
-            px={16}
-            py={{ base: 8, md: 6 }}
+            px={10}
+            py={{ base: 6, md: 5 }}
             borderRadius="4px"
             display="flex"
             alignItems="center"
             gap={2}
             fontSize="base"
             _hover={{ bg: "black" }}
-            width={{ base: "100%", md: "auto" }}
+            width={{ base: "270px", md: "auto" }}
+            disabled={showMessage}
           >
-            <HeartIcon />
-            <Text fontSize={14}>Get on iOS</Text>
+            <Text fontSize={12}>Download App</Text>
           </Button>
         </Box>
+
+        {/* Message for desktop users */}
+        {showMessage && (
+          <Text color="#141414" mt={4}>
+            Open this page on your phone to download the app 📱
+          </Text>
+        )}
       </Box>
     </Box>
   );
