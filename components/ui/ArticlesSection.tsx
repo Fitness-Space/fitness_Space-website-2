@@ -155,21 +155,21 @@ const ArticlesSection: React.FC = () => {
         mb={8}
         direction={{ base: "column", md: "row" }}
         gap={4}
-        px={{ base: 0, md: 12 }}
+        px={{ base: 2, md: 12 }}
       >
         <Box>
           <Text
-            fontSize={{ base: "32px", md: "36px" }}
+            fontSize={{ base: "30px", md: "30px" }}
             fontWeight="extrabold"
             color="#141414"
           >
             Articles
           </Text>
-          <Text fontSize={{ base: "14px", md: "16px" }} color="#141414">
+          <Text fontSize={{ base: "16px", md: "16px" }} color="#141414">
             Check out this quick read that will help you build healthy habits.
           </Text>
         </Box>
-        <Text
+        {/* <Text
           as="a"
           fontSize="14px"
           color="gray.600"
@@ -181,19 +181,19 @@ const ArticlesSection: React.FC = () => {
           mt={{ base: 4, md: 0 }}
         >
           See more articles <LuArrowRight size={16} />
-        </Text>
+        </Text> */}
       </Flex>
 
       {/* Mobile carousel - Show only ONE card with auto-slide */}
-      <Box display={{ base: "block", md: "none" }} position="relative">
+      <Box display={{ base: "block", md: "none" }} position="relative" px={2}>
         <Box
           position="relative"
           borderRadius="20px"
           overflow="hidden"
           width="100%"
-          maxW="328px"
+          maxW="100%"
           mx="auto"
-          height="200px"
+          height="250px"
           mb={6}
           onClick={() => {
             pauseAutoPlay();
@@ -262,8 +262,7 @@ const ArticlesSection: React.FC = () => {
             transform="translateY(-50%)"
             px={4}
             zIndex={10}
-            maxW="328px"
-            mx="auto"
+            w="100%"
           >
             {/* Left Button */}
             <IconButton
@@ -271,8 +270,8 @@ const ArticlesSection: React.FC = () => {
               bg="#f2a412"
               color="white"
               borderRadius="full"
-              w="40px"
-              h="40px"
+              w={{ base: "48px", md: "40px" }}
+              h={{ base: "48px", md: "40px" }}
               shadow="lg"
               onClick={(e) => {
                 e.stopPropagation();
@@ -281,7 +280,7 @@ const ArticlesSection: React.FC = () => {
               _hover={{ bg: "#e69500" }}
               _active={{ bg: "#d08500" }}
             >
-              <LuChevronLeft size={20} />
+              <LuChevronLeft size={24} />
             </IconButton>
 
             {/* Right Button */}
@@ -290,8 +289,8 @@ const ArticlesSection: React.FC = () => {
               bg="#f2a412"
               color="white"
               borderRadius="full"
-              w="40px"
-              h="40px"
+              w={{ base: "48px", md: "40px" }}
+              h={{ base: "48px", md: "40px" }}
               shadow="lg"
               onClick={(e) => {
                 e.stopPropagation();
@@ -300,7 +299,7 @@ const ArticlesSection: React.FC = () => {
               _hover={{ bg: "#e69500" }}
               _active={{ bg: "#d08500" }}
             >
-              <LuChevronRight size={20} />
+              <LuChevronRight size={24} />
             </IconButton>
           </Flex>
         )}

@@ -48,7 +48,7 @@ const LandingSection = () => {
 
   return (
     <Box
-      px={{ base: 4, sm: 3, md: 0 }}
+      px={{ base: 5, sm: 3, md: 0 }}
       py={{ base: 8, sm: 12, md: 20 }}
       maxW="1004px"
       mx="auto"
@@ -56,12 +56,22 @@ const LandingSection = () => {
       <Box id="landingsection">
         {/* Mobile Hero Image */}
         {isMobile && (
-          <Box id="hero-image" mb={10} mt={4} borderRadius="md">
+          <Box id="hero-image" mb={10} mt={10} borderRadius="md">
             <VStack textAlign="center" color="#141414">
-              <Text fontSize="32px" fontWeight="extrabold">
-                Redefining Fitness and Wellness for Everyone
+              <Text fontSize="32px" fontWeight="extrabold" lineHeight="1.2">
+                Redefining <br />
+                <Text as="span" borderBottom="3px solid #F2A412" pb="2px">
+                  Fitness and Wellness
+                </Text>
+                <br />
+                for Everyone
               </Text>
-              <Text fontSize="16px" fontWeight="medium">
+              <Text
+                fontSize="16px"
+                fontWeight="medium"
+                pt={{ base: 6, md: 0 }}
+                pb={{ base: 8, md: 0 }}
+              >
                 Fast-track your weight-loss and wellness goals with a
                 personalized approach.
               </Text>
@@ -95,7 +105,7 @@ const LandingSection = () => {
             color="#141414"
             width="90%"
           >
-            <Text fontSize="30px">
+            <Text fontSize="32px" lineHeight="1.2" fontWeight="extrabold">
               Redefining Fitness and Wellness for Everyone
             </Text>
             <Text fontSize="16px">
@@ -115,10 +125,10 @@ const LandingSection = () => {
         {/* Features Section */}
         <Box display={{ base: "block", md: "flex" }} gap={8}>
           {features.map((feature, index) => (
-            <Box key={index} mb={{ base: 6, md: 0 }} flex="1">
+            <Box key={index} mb={{ base: 8, md: 0 }} flex="1">
               <Text
                 fontWeight="bold"
-                fontSize={{ base: "16px", md: "24px" }}
+                fontSize={{ base: "20px", md: "20px" }}
                 mb={2}
                 color="black"
                 cursor="pointer"
@@ -127,7 +137,7 @@ const LandingSection = () => {
               >
                 {feature.title}
               </Text>
-              <Text color="gray.600" fontSize="14px">
+              <Text color="#09090B" fontSize="14px">
                 {feature.description}
               </Text>
             </Box>
