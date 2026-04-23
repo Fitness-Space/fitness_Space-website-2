@@ -32,9 +32,9 @@ const LandingSection = () => {
         "Our personalized, simple, and replicable daily home workouts kick-start science-backed metabolic processes, promoting effective and sustainable weight loss for a transformative journey.",
     },
     {
-      title: "Nutrient-Packed Meal",
+      title: "Culture-Fit Meals",
       description:
-        "Fuel your body with wholesome, nutrient-dense meals. Eat smart, stay energized, and enjoy every bite. Portion control, meal balance, and mindful nutrition!",
+        " Fuel your body with meals built around the foods you already love. Bibi understands your favorites, your budget and your goals.",
     },
     {
       title: "Intermittent Fasting",
@@ -103,10 +103,10 @@ const LandingSection = () => {
             gap={3}
             textAlign="center"
             color="#141414"
-            width="90%"
+            width="100%"
           >
             <Text fontSize="32px" lineHeight="1.2" fontWeight="extrabold">
-              Redefining Fitness and Wellness for Everyone
+              Your daily system for sustainable weight loss and wellness.
             </Text>
             <Text fontSize="16px">
               Fast-track your weight-loss and wellness goals with a personalized
