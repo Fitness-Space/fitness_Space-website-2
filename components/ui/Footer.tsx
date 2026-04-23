@@ -52,7 +52,7 @@ const Footer = () => {
             Office:
           </Text>
           <Text fontSize="12px">
-            46 Kenneth Street, Achara Layout, <br />
+            46 Kenneth Road, Achara Layout, <br />
             Enugu, Enugu State.
           </Text>
         </Box>

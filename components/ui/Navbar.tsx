@@ -12,14 +12,18 @@ import {
   Text,
   HStack,
   Drawer,
+  createToaster,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { LuMenu, LuX } from "react-icons/lu";
 import MobileHamburger from "./MobileHamburger";
-// ...existing code...
+import Toast from "./toast";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const toaster = createToaster({});
 
   const handleScrollToSection = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
@@ -29,6 +33,25 @@ const Navbar = () => {
         behavior: "smooth",
         block: "start",
       });
+    }
+  };
+
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    const isAndroid = /android/.test(userAgent);
+    const isIOS = /iphone|ipad|ipod/.test(userAgent);
+
+    if (isAndroid) {
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.fitnessspace.app",
+        "_blank",
+      );
+    } else if (isIOS) {
+      window.open("https://apps.apple.com/app/id389801252", "_blank");
+    } else {
+      setToastMessage("Open this page on your phone to download the app 📱");
+      setToastVisible(true);
     }
   };
 
@@ -128,20 +151,19 @@ const Navbar = () => {
           </Flex>
 
           <Box display="flex" minW={{ base: "auto", md: "160px" }}>
-            <NextLink href="#health-score" legacyBehavior passHref>
-              <Button
-                as="a"
-                bg="black"
-                color="white"
-                _hover={{ bg: "gray.800" }}
-                borderRadius="7px"
-                px={6}
-                py={3}
-                display={{ base: "none", md: "inline-flex" }}
-              >
-                Get Started
-              </Button>
-            </NextLink>
+            <Button
+              onClick={handleDownload}
+              as="a"
+              bg="black"
+              color="white"
+              _hover={{ bg: "gray.800" }}
+              borderRadius="7px"
+              px={6}
+              py={3}
+              display={{ base: "none", md: "inline-flex" }}
+            >
+              Get Started
+            </Button>
 
             {/* Mobile hamburger */}
             <Box display={{ base: "block", md: "none" }}>
@@ -150,6 +172,11 @@ const Navbar = () => {
           </Box>
         </Flex>
       </Box>
+      <Toast
+        message={toastMessage}
+        visible={toastVisible}
+        onClose={() => setToastVisible(false)}
+      />
     </>
   );
 };

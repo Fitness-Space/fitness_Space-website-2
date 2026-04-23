@@ -589,7 +589,7 @@ export default function PrivacyPolicy() {
           <Text as="span" fontWeight="bold">
             Address:
           </Text>{" "}
-          46 Kenneth Street, Achara Layout, Enugu, Enugu State, Nigeria.
+          46 Kenneth Road, Achara Layout, Enugu, Enugu State, Nigeria.
         </Text>
 
         <Text>Website: getfitness.space</Text>

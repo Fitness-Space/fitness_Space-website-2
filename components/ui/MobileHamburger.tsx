@@ -15,6 +15,26 @@ import NextLink from "next/link";
 
 const MobileHamburger = () => {
   const [open, setOpen] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+
+  const handleDownload = () => {
+    const userAgent = navigator.userAgent || navigator.vendor;
+
+    if (/android/i.test(userAgent)) {
+      window.open(
+        "https://play.google.com/store/apps/details?id=com.fitnessspace.app",
+        "_blank",
+      );
+    } else if (/iphone|ipad|ipod/i.test(userAgent)) {
+      window.open("https://apps.apple.com/app/id389801252", "_blank");
+    } else {
+      setShowMessage(true);
+      setTimeout(() => setShowMessage(false), 4000);
+    }
+
+    // close drawer after click
+    setOpen(false);
+  };
 
   return (
     <Drawer.Root open={open} onOpenChange={(e) => setOpen(e.open)}>
@@ -101,19 +121,16 @@ const MobileHamburger = () => {
                   What We Offer
                 </Link>
 
-                <NextLink href="#health-score" passHref legacyBehavior>
-                  <Button
-                    as="a"
-                    bg="black"
-                    color="white"
-                    borderRadius="full"
-                    _hover={{ bg: "gray.800" }}
-                    mt={4}
-                    onClick={() => setOpen(false)}
-                  >
-                    Get Started
-                  </Button>
-                </NextLink>
+                <Button
+                  bg="black"
+                  color="white"
+                  borderRadius="full"
+                  _hover={{ bg: "gray.800" }}
+                  mt={4}
+                  onClick={handleDownload}
+                >
+                  Get Started
+                </Button>
               </Flex>
             </Drawer.Body>
           </Drawer.Content>
